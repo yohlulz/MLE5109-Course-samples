@@ -1,8 +1,8 @@
 package com.tora.instrumented;
 
-import org.junit.Ignore;
-import org.openjdk.jmh.annotations.*;
-import org.openjdk.jmh.profile.HotspotMemoryProfiler;
+import org.openjdk.jmh.annotations.Benchmark;
+import org.openjdk.jmh.annotations.Scope;
+import org.openjdk.jmh.annotations.State;
 import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.RunnerException;
 import org.openjdk.jmh.runner.options.Options;
@@ -11,9 +11,7 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
-import java.util.concurrent.TimeUnit;
 
-@Ignore
 public class Benchmarks {
     private static final Collection<String> c = Arrays.asList("Snap", "Crackle", "Pop");
 
