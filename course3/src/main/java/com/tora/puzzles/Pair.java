@@ -27,7 +27,7 @@ public class Pair<T> {
     public static void main(String[] args) {
         Pair p = new Pair<Object>(23, "skidoo");
         System.out.println(p.first() + " " + p.second());
-        for (String s : p.stringList()) {
+        for (Object s : p.stringList()) {
             System.out.print(s + " ");
         }
     }
