@@ -1,0 +1,7 @@
+target
+bin/*
+.classpath
+.project
+.hgignore
+.checkstyle
+.settings/*

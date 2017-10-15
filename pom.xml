@@ -87,6 +87,7 @@
     <modules>
         <module>course2</module>
 	<module>course3</module>
+	<module>course4</module>
     </modules>
 
     <profiles>
