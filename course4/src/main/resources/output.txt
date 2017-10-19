@@ -1,0 +1,2703 @@
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_after
+# Parameters: (repositorySupplier = HASH_SET, size = 1000)
+
+# Run progress: 0.00% complete, ETA 00:30:00
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+23586.300 ops/ms
+# Warmup Iteration   2: 24408.126 ops/ms
+# Warmup Iteration   3: 26114.205 ops/ms
+# Warmup Iteration   4: 26776.391 ops/ms
+# Warmup Iteration   5: 27151.899 ops/ms
+# Warmup Iteration   6: 26893.388 ops/ms
+# Warmup Iteration   7: 26852.925 ops/ms
+# Warmup Iteration   8: 27354.689 ops/ms
+# Warmup Iteration   9: 27293.997 ops/ms
+# Warmup Iteration  10: 27169.276 ops/ms
+Iteration   1: 27024.581 ops/ms
+Iteration   2: 26996.999 ops/ms
+Iteration   3: 26661.388 ops/ms
+Iteration   4: 26557.497 ops/ms
+Iteration   5: 27080.436 ops/ms
+Iteration   6: 26379.764 ops/ms
+Iteration   7: 25890.987 ops/ms
+Iteration   8: 27241.686 ops/ms
+Iteration   9: 25686.163 ops/ms
+Iteration  10: 27345.953 ops/ms
+Iteration  11: 26177.036 ops/ms
+Iteration  12: 26362.541 ops/ms
+Iteration  13: 26973.702 ops/ms
+Iteration  14: 25064.209 ops/ms
+Iteration  15: 23746.838 ops/ms
+Iteration  16: 23478.103 ops/ms
+Iteration  17: 24028.636 ops/ms
+Iteration  18: 23694.278 ops/ms
+Iteration  19: 23910.605 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+23916.183 ops/ms
+
+# Run progress: 1.67% complete, ETA 00:30:08
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+25041.893 ops/ms
+# Warmup Iteration   2: 24602.175 ops/ms
+# Warmup Iteration   3: 27273.403 ops/ms
+# Warmup Iteration   4: 27855.455 ops/ms
+# Warmup Iteration   5: 27762.529 ops/ms
+# Warmup Iteration   6: 27365.736 ops/ms
+# Warmup Iteration   7: 27753.289 ops/ms
+# Warmup Iteration   8: 27969.718 ops/ms
+# Warmup Iteration   9: 27282.024 ops/ms
+# Warmup Iteration  10: 27639.546 ops/ms
+Iteration   1: 27265.687 ops/ms
+Iteration   2: 27262.997 ops/ms
+Iteration   3: 27494.602 ops/ms
+Iteration   4: 27782.569 ops/ms
+Iteration   5: 27464.123 ops/ms
+Iteration   6: 27789.624 ops/ms
+Iteration   7: 26953.243 ops/ms
+Iteration   8: 27330.116 ops/ms
+Iteration   9: 27494.089 ops/ms
+Iteration  10: 27153.273 ops/ms
+Iteration  11: 27299.539 ops/ms
+Iteration  12: 27006.102 ops/ms
+Iteration  13: 26575.043 ops/ms
+Iteration  14: 23674.786 ops/ms
+Iteration  15: 23459.996 ops/ms
+Iteration  16: 23688.645 ops/ms
+Iteration  17: 23569.064 ops/ms
+Iteration  18: 23881.949 ops/ms
+Iteration  19: 23698.551 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+23683.603 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_after":
+  25868.630 ±(99.9%) 899.493 ops/ms [Average]
+  (min, avg, max) = (23459.996, 25868.630, 27789.624), stdev = 1598.847
+  CI (99.9%): [24969.137, 26768.122] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_after
+# Parameters: (repositorySupplier = HASH_SET, size = 10000)
+
+# Run progress: 3.33% complete, ETA 00:29:38
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+24527.462 ops/ms
+# Warmup Iteration   2: 24729.834 ops/ms
+# Warmup Iteration   3: 27036.805 ops/ms
+# Warmup Iteration   4: 26983.839 ops/ms
+# Warmup Iteration   5: 27057.356 ops/ms
+# Warmup Iteration   6: 26212.425 ops/ms
+# Warmup Iteration   7: 26688.232 ops/ms
+# Warmup Iteration   8: 26808.181 ops/ms
+# Warmup Iteration   9: 27031.608 ops/ms
+# Warmup Iteration  10: 26596.295 ops/ms
+Iteration   1: 26310.582 ops/ms
+Iteration   2: 26541.998 ops/ms
+Iteration   3: 27032.389 ops/ms
+Iteration   4: 26795.212 ops/ms
+Iteration   5: 27068.447 ops/ms
+Iteration   6: 26468.200 ops/ms
+Iteration   7: 26775.977 ops/ms
+Iteration   8: 26620.973 ops/ms
+Iteration   9: 26541.705 ops/ms
+Iteration  10: 26647.420 ops/ms
+Iteration  11: 26223.880 ops/ms
+Iteration  12: 26074.569 ops/ms
+Iteration  13: 27087.607 ops/ms
+Iteration  14: 24088.003 ops/ms
+Iteration  15: 23442.965 ops/ms
+Iteration  16: 23187.008 ops/ms
+Iteration  17: 23257.729 ops/ms
+Iteration  18: 23547.643 ops/ms
+Iteration  19: 23346.618 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+23477.566 ops/ms
+
+# Run progress: 5.00% complete, ETA 00:29:07
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+23918.323 ops/ms
+# Warmup Iteration   2: 24733.199 ops/ms
+# Warmup Iteration   3: 26504.655 ops/ms
+# Warmup Iteration   4: 24018.602 ops/ms
+# Warmup Iteration   5: 24356.255 ops/ms
+# Warmup Iteration   6: 24009.169 ops/ms
+# Warmup Iteration   7: 24722.536 ops/ms
+# Warmup Iteration   8: 27186.397 ops/ms
+# Warmup Iteration   9: 26062.611 ops/ms
+# Warmup Iteration  10: 26840.787 ops/ms
+Iteration   1: 26864.385 ops/ms
+Iteration   2: 24413.162 ops/ms
+Iteration   3: 23721.773 ops/ms
+Iteration   4: 24448.741 ops/ms
+Iteration   5: 24817.960 ops/ms
+Iteration   6: 27054.356 ops/ms
+Iteration   7: 27145.670 ops/ms
+Iteration   8: 26715.609 ops/ms
+Iteration   9: 26997.776 ops/ms
+Iteration  10: 24419.598 ops/ms
+Iteration  11: 24085.783 ops/ms
+Iteration  12: 24418.653 ops/ms
+Iteration  13: 24376.148 ops/ms
+Iteration  14: 27287.299 ops/ms
+Iteration  15: 22722.675 ops/ms
+Iteration  16: 23656.326 ops/ms
+Iteration  17: 23093.084 ops/ms
+Iteration  18: 20962.653 ops/ms
+Iteration  19: 21162.426 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+21160.744 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_after":
+  25001.533 ±(99.9%) 1056.669 ops/ms [Average]
+  (min, avg, max) = (20962.653, 25001.533, 27287.299), stdev = 1878.227
+  CI (99.9%): [23944.864, 26058.201] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_after
+# Parameters: (repositorySupplier = TREE_SET, size = 1000)
+
+# Run progress: 6.67% complete, ETA 00:28:31
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+27974.138 ops/ms
+# Warmup Iteration   2: 32753.282 ops/ms
+# Warmup Iteration   3: 29841.934 ops/ms
+# Warmup Iteration   4: 33752.260 ops/ms
+# Warmup Iteration   5: 33150.941 ops/ms
+# Warmup Iteration   6: 33730.596 ops/ms
+# Warmup Iteration   7: 33721.445 ops/ms
+# Warmup Iteration   8: 33289.387 ops/ms
+# Warmup Iteration   9: 33699.774 ops/ms
+# Warmup Iteration  10: 33335.391 ops/ms
+Iteration   1: 33325.502 ops/ms
+Iteration   2: 33374.043 ops/ms
+Iteration   3: 33392.066 ops/ms
+Iteration   4: 33364.019 ops/ms
+Iteration   5: 33373.457 ops/ms
+Iteration   6: 33658.680 ops/ms
+Iteration   7: 31055.313 ops/ms
+Iteration   8: 30389.227 ops/ms
+Iteration   9: 30698.370 ops/ms
+Iteration  10: 30887.116 ops/ms
+Iteration  11: 30495.558 ops/ms
+Iteration  12: 31101.752 ops/ms
+Iteration  13: 30305.538 ops/ms
+Iteration  14: 30767.805 ops/ms
+Iteration  15: 31011.508 ops/ms
+Iteration  16: 30935.703 ops/ms
+Iteration  17: 30614.418 ops/ms
+Iteration  18: 31046.801 ops/ms
+Iteration  19: 31410.353 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+30341.213 ops/ms
+
+# Run progress: 8.33% complete, ETA 00:27:59
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+31113.108 ops/ms
+# Warmup Iteration   2: 32468.296 ops/ms
+# Warmup Iteration   3: 30027.087 ops/ms
+# Warmup Iteration   4: 33637.515 ops/ms
+# Warmup Iteration   5: 32877.836 ops/ms
+# Warmup Iteration   6: 31057.141 ops/ms
+# Warmup Iteration   7: 30984.632 ops/ms
+# Warmup Iteration   8: 33243.276 ops/ms
+# Warmup Iteration   9: 33754.819 ops/ms
+# Warmup Iteration  10: 33000.132 ops/ms
+Iteration   1: 31040.244 ops/ms
+Iteration   2: 29683.306 ops/ms
+Iteration   3: 30101.114 ops/ms
+Iteration   4: 30090.490 ops/ms
+Iteration   5: 32883.635 ops/ms
+Iteration   6: 33611.088 ops/ms
+Iteration   7: 33123.440 ops/ms
+Iteration   8: 33762.652 ops/ms
+Iteration   9: 33412.087 ops/ms
+Iteration  10: 33666.103 ops/ms
+Iteration  11: 33106.941 ops/ms
+Iteration  12: 33193.609 ops/ms
+Iteration  13: 32560.527 ops/ms
+Iteration  14: 33438.378 ops/ms
+Iteration  15: 33348.423 ops/ms
+Iteration  16: 33742.419 ops/ms
+Iteration  17: 33749.334 ops/ms
+Iteration  18: 30072.658 ops/ms
+Iteration  19: 29895.724 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+32095.686 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_after":
+  31953.157 ±(99.9%) 811.102 ops/ms [Average]
+  (min, avg, max) = (29683.306, 31953.157, 33762.652), stdev = 1441.732
+  CI (99.9%): [31142.056, 32764.259] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_after
+# Parameters: (repositorySupplier = TREE_SET, size = 10000)
+
+# Run progress: 10.00% complete, ETA 00:27:27
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+28312.706 ops/ms
+# Warmup Iteration   2: 24410.638 ops/ms
+# Warmup Iteration   3: 31822.978 ops/ms
+# Warmup Iteration   4: 32726.414 ops/ms
+# Warmup Iteration   5: 29677.617 ops/ms
+# Warmup Iteration   6: 27831.439 ops/ms
+# Warmup Iteration   7: 29690.569 ops/ms
+# Warmup Iteration   8: 29883.000 ops/ms
+# Warmup Iteration   9: 31572.951 ops/ms
+# Warmup Iteration  10: 31028.635 ops/ms
+Iteration   1: 33305.434 ops/ms
+Iteration   2: 33212.530 ops/ms
+Iteration   3: 33113.353 ops/ms
+Iteration   4: 33240.385 ops/ms
+Iteration   5: 32580.687 ops/ms
+Iteration   6: 32786.370 ops/ms
+Iteration   7: 29224.873 ops/ms
+Iteration   8: 26118.532 ops/ms
+Iteration   9: 25800.323 ops/ms
+Iteration  10: 30305.569 ops/ms
+Iteration  11: 33299.028 ops/ms
+Iteration  12: 32750.823 ops/ms
+Iteration  13: 33232.662 ops/ms
+Iteration  14: 33288.542 ops/ms
+Iteration  15: 33328.140 ops/ms
+Iteration  16: 33306.313 ops/ms
+Iteration  17: 33259.320 ops/ms
+Iteration  18: 33299.129 ops/ms
+Iteration  19: 32698.215 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+33322.750 ops/ms
+
+# Run progress: 11.67% complete, ETA 00:26:57
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+29920.664 ops/ms
+# Warmup Iteration   2: 28044.186 ops/ms
+# Warmup Iteration   3: 29685.871 ops/ms
+# Warmup Iteration   4: 34242.443 ops/ms
+# Warmup Iteration   5: 34185.490 ops/ms
+# Warmup Iteration   6: 34161.177 ops/ms
+# Warmup Iteration   7: 33925.127 ops/ms
+# Warmup Iteration   8: 32035.574 ops/ms
+# Warmup Iteration   9: 32351.717 ops/ms
+# Warmup Iteration  10: 31495.881 ops/ms
+Iteration   1: 32090.101 ops/ms
+Iteration   2: 32055.768 ops/ms
+Iteration   3: 33820.487 ops/ms
+Iteration   4: 34052.445 ops/ms
+Iteration   5: 33578.613 ops/ms
+Iteration   6: 34013.078 ops/ms
+Iteration   7: 33776.941 ops/ms
+Iteration   8: 33696.824 ops/ms
+Iteration   9: 33987.625 ops/ms
+Iteration  10: 33979.688 ops/ms
+Iteration  11: 33177.313 ops/ms
+Iteration  12: 33972.648 ops/ms
+Iteration  13: 33593.687 ops/ms
+Iteration  14: 34153.068 ops/ms
+Iteration  15: 33991.344 ops/ms
+Iteration  16: 34039.484 ops/ms
+Iteration  17: 34030.326 ops/ms
+Iteration  18: 32842.232 ops/ms
+Iteration  19: 33342.673 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+33104.179 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_after":
+  32819.287 ±(99.9%) 1044.734 ops/ms [Average]
+  (min, avg, max) = (25800.323, 32819.287, 34153.068), stdev = 1857.014
+  CI (99.9%): [31774.553, 33864.022] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_after
+# Parameters: (repositorySupplier = ARRAY_LIST, size = 1000)
+
+# Run progress: 13.33% complete, ETA 00:26:26
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+14522.040 ops/ms
+# Warmup Iteration   2: 23998.271 ops/ms
+# Warmup Iteration   3: 27495.726 ops/ms
+# Warmup Iteration   4: 28283.105 ops/ms
+# Warmup Iteration   5: 26123.291 ops/ms
+# Warmup Iteration   6: 23876.364 ops/ms
+# Warmup Iteration   7: 23992.924 ops/ms
+# Warmup Iteration   8: 22007.458 ops/ms
+# Warmup Iteration   9: 21734.985 ops/ms
+# Warmup Iteration  10: 21807.700 ops/ms
+Iteration   1: 21749.095 ops/ms
+Iteration   2: 24021.831 ops/ms
+Iteration   3: 24009.762 ops/ms
+Iteration   4: 24065.344 ops/ms
+Iteration   5: 23965.447 ops/ms
+Iteration   6: 22143.876 ops/ms
+Iteration   7: 20239.770 ops/ms
+Iteration   8: 20265.069 ops/ms
+Iteration   9: 20408.201 ops/ms
+Iteration  10: 22350.087 ops/ms
+Iteration  11: 21984.000 ops/ms
+Iteration  12: 22601.601 ops/ms
+Iteration  13: 22172.209 ops/ms
+Iteration  14: 22407.858 ops/ms
+Iteration  15: 22430.954 ops/ms
+Iteration  16: 22473.565 ops/ms
+Iteration  17: 22285.520 ops/ms
+Iteration  18: 20688.400 ops/ms
+Iteration  19: 20217.680 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+20433.375 ops/ms
+
+# Run progress: 15.00% complete, ETA 00:25:54
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+13434.159 ops/ms
+# Warmup Iteration   2: 23890.598 ops/ms
+# Warmup Iteration   3: 27650.061 ops/ms
+# Warmup Iteration   4: 27990.480 ops/ms
+# Warmup Iteration   5: 25773.639 ops/ms
+# Warmup Iteration   6: 22401.348 ops/ms
+# Warmup Iteration   7: 22309.360 ops/ms
+# Warmup Iteration   8: 22403.660 ops/ms
+# Warmup Iteration   9: 22901.020 ops/ms
+# Warmup Iteration  10: 24271.109 ops/ms
+Iteration   1: 24293.129 ops/ms
+Iteration   2: 24400.418 ops/ms
+Iteration   3: 23553.804 ops/ms
+Iteration   4: 22207.707 ops/ms
+Iteration   5: 22155.561 ops/ms
+Iteration   6: 22394.738 ops/ms
+Iteration   7: 22851.917 ops/ms
+Iteration   8: 24248.938 ops/ms
+Iteration   9: 24216.768 ops/ms
+Iteration  10: 24074.383 ops/ms
+Iteration  11: 24442.021 ops/ms
+Iteration  12: 24223.267 ops/ms
+Iteration  13: 24311.369 ops/ms
+Iteration  14: 24083.331 ops/ms
+Iteration  15: 24314.147 ops/ms
+Iteration  16: 22679.803 ops/ms
+Iteration  17: 22205.267 ops/ms
+Iteration  18: 22393.980 ops/ms
+Iteration  19: 22782.405 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+24301.228 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_after":
+  22776.196 ±(99.9%) 756.810 ops/ms [Average]
+  (min, avg, max) = (20217.680, 22776.196, 24442.021), stdev = 1345.229
+  CI (99.9%): [22019.386, 23533.005] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_after
+# Parameters: (repositorySupplier = ARRAY_LIST, size = 10000)
+
+# Run progress: 16.67% complete, ETA 00:25:25
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+6577.038 ops/ms
+# Warmup Iteration   2: 6591.477 ops/ms
+# Warmup Iteration   3: 6656.800 ops/ms
+# Warmup Iteration   4: 7341.911 ops/ms
+# Warmup Iteration   5: 10581.575 ops/ms
+# Warmup Iteration   6: 10747.988 ops/ms
+# Warmup Iteration   7: 11345.951 ops/ms
+# Warmup Iteration   8: 10263.829 ops/ms
+# Warmup Iteration   9: 12381.756 ops/ms
+# Warmup Iteration  10: 12233.937 ops/ms
+Iteration   1: 12381.181 ops/ms
+Iteration   2: 12107.590 ops/ms
+Iteration   3: 12807.358 ops/ms
+Iteration   4: 12731.981 ops/ms
+Iteration   5: 13493.970 ops/ms
+Iteration   6: 12350.317 ops/ms
+Iteration   7: 12108.650 ops/ms
+Iteration   8: 13182.489 ops/ms
+Iteration   9: 13094.551 ops/ms
+Iteration  10: 12290.503 ops/ms
+Iteration  11: 13365.769 ops/ms
+Iteration  12: 12674.287 ops/ms
+Iteration  13: 12901.024 ops/ms
+Iteration  14: 11847.386 ops/ms
+Iteration  15: 12139.828 ops/ms
+Iteration  16: 12196.736 ops/ms
+Iteration  17: 12901.559 ops/ms
+Iteration  18: 12485.014 ops/ms
+Iteration  19: 12386.132 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+13024.280 ops/ms
+
+# Run progress: 18.33% complete, ETA 00:24:55
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+7823.364 ops/ms
+# Warmup Iteration   2: 6905.959 ops/ms
+# Warmup Iteration   3: 6865.720 ops/ms
+# Warmup Iteration   4: 7527.357 ops/ms
+# Warmup Iteration   5: 9983.116 ops/ms
+# Warmup Iteration   6: 10046.435 ops/ms
+# Warmup Iteration   7: 9914.926 ops/ms
+# Warmup Iteration   8: 10599.968 ops/ms
+# Warmup Iteration   9: 12484.262 ops/ms
+# Warmup Iteration  10: 12712.364 ops/ms
+Iteration   1: 12763.796 ops/ms
+Iteration   2: 12715.830 ops/ms
+Iteration   3: 12715.764 ops/ms
+Iteration   4: 12928.463 ops/ms
+Iteration   5: 13075.684 ops/ms
+Iteration   6: 12753.791 ops/ms
+Iteration   7: 12374.296 ops/ms
+Iteration   8: 12572.554 ops/ms
+Iteration   9: 12595.249 ops/ms
+Iteration  10: 12351.920 ops/ms
+Iteration  11: 12404.204 ops/ms
+Iteration  12: 12775.986 ops/ms
+Iteration  13: 13391.238 ops/ms
+Iteration  14: 12352.742 ops/ms
+Iteration  15: 12125.041 ops/ms
+Iteration  16: 12209.328 ops/ms
+Iteration  17: 12180.705 ops/ms
+Iteration  18: 12694.449 ops/ms
+Iteration  19: 12999.055 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+12778.983 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_after":
+  12630.742 ±(99.9%) 222.210 ops/ms [Average]
+  (min, avg, max) = (11847.386, 12630.742, 13493.970), stdev = 394.977
+  CI (99.9%): [12408.533, 12852.952] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_after
+# Parameters: (repositorySupplier = LINKED_LIST, size = 1000)
+
+# Run progress: 20.00% complete, ETA 00:24:24
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+14406.714 ops/ms
+# Warmup Iteration   2: 19156.209 ops/ms
+# Warmup Iteration   3: 23955.684 ops/ms
+# Warmup Iteration   4: 24374.058 ops/ms
+# Warmup Iteration   5: 20052.303 ops/ms
+# Warmup Iteration   6: 21215.653 ops/ms
+# Warmup Iteration   7: 21132.767 ops/ms
+# Warmup Iteration   8: 21297.971 ops/ms
+# Warmup Iteration   9: 21048.787 ops/ms
+# Warmup Iteration  10: 19319.685 ops/ms
+Iteration   1: 17397.198 ops/ms
+Iteration   2: 18615.332 ops/ms
+Iteration   3: 19080.612 ops/ms
+Iteration   4: 21025.407 ops/ms
+Iteration   5: 20566.746 ops/ms
+Iteration   6: 20898.289 ops/ms
+Iteration   7: 20342.777 ops/ms
+Iteration   8: 20516.074 ops/ms
+Iteration   9: 20378.775 ops/ms
+Iteration  10: 20809.223 ops/ms
+Iteration  11: 20484.292 ops/ms
+Iteration  12: 18549.255 ops/ms
+Iteration  13: 17353.631 ops/ms
+Iteration  14: 18888.027 ops/ms
+Iteration  15: 18115.987 ops/ms
+Iteration  16: 20341.541 ops/ms
+Iteration  17: 20805.010 ops/ms
+Iteration  18: 19710.230 ops/ms
+Iteration  19: 19268.081 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+19277.036 ops/ms
+
+# Run progress: 21.67% complete, ETA 00:23:53
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+11848.249 ops/ms
+# Warmup Iteration   2: 21059.249 ops/ms
+# Warmup Iteration   3: 25527.255 ops/ms
+# Warmup Iteration   4: 25926.076 ops/ms
+# Warmup Iteration   5: 22598.814 ops/ms
+# Warmup Iteration   6: 21901.610 ops/ms
+# Warmup Iteration   7: 20818.948 ops/ms
+# Warmup Iteration   8: 19916.865 ops/ms
+# Warmup Iteration   9: 19868.167 ops/ms
+# Warmup Iteration  10: 17958.038 ops/ms
+Iteration   1: 20837.765 ops/ms
+Iteration   2: 21479.309 ops/ms
+Iteration   3: 21539.366 ops/ms
+Iteration   4: 21519.855 ops/ms
+Iteration   5: 21828.593 ops/ms
+Iteration   6: 21885.899 ops/ms
+Iteration   7: 19886.647 ops/ms
+Iteration   8: 21005.201 ops/ms
+Iteration   9: 21161.651 ops/ms
+Iteration  10: 20578.530 ops/ms
+Iteration  11: 20793.550 ops/ms
+Iteration  12: 21255.590 ops/ms
+Iteration  13: 20622.340 ops/ms
+Iteration  14: 21502.823 ops/ms
+Iteration  15: 21191.068 ops/ms
+Iteration  16: 21041.393 ops/ms
+Iteration  17: 21279.827 ops/ms
+Iteration  18: 21312.236 ops/ms
+Iteration  19: 19740.177 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+21541.096 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_after":
+  20360.661 ±(99.9%) 662.403 ops/ms [Average]
+  (min, avg, max) = (17353.631, 20360.661, 21885.899), stdev = 1177.421
+  CI (99.9%): [19698.258, 21023.064] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_after
+# Parameters: (repositorySupplier = LINKED_LIST, size = 10000)
+
+# Run progress: 23.33% complete, ETA 00:23:24
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+5283.481 ops/ms
+# Warmup Iteration   2: 5586.767 ops/ms
+# Warmup Iteration   3: 5478.569 ops/ms
+# Warmup Iteration   4: 5518.747 ops/ms
+# Warmup Iteration   5: 7867.425 ops/ms
+# Warmup Iteration   6: 8980.902 ops/ms
+# Warmup Iteration   7: 8968.207 ops/ms
+# Warmup Iteration   8: 9127.743 ops/ms
+# Warmup Iteration   9: 9591.577 ops/ms
+# Warmup Iteration  10: 11812.779 ops/ms
+Iteration   1: 11741.460 ops/ms
+Iteration   2: 11993.345 ops/ms
+Iteration   3: 12517.977 ops/ms
+Iteration   4: 12520.510 ops/ms
+Iteration   5: 12495.933 ops/ms
+Iteration   6: 11909.899 ops/ms
+Iteration   7: 12267.184 ops/ms
+Iteration   8: 11624.392 ops/ms
+Iteration   9: 12461.018 ops/ms
+Iteration  10: 12492.566 ops/ms
+Iteration  11: 12157.361 ops/ms
+Iteration  12: 11588.500 ops/ms
+Iteration  13: 11661.915 ops/ms
+Iteration  14: 11882.030 ops/ms
+Iteration  15: 12391.182 ops/ms
+Iteration  16: 12159.056 ops/ms
+Iteration  17: 12054.447 ops/ms
+Iteration  18: 12473.826 ops/ms
+Iteration  19: 12025.575 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+12057.111 ops/ms
+
+# Run progress: 25.00% complete, ETA 00:22:53
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+5149.585 ops/ms
+# Warmup Iteration   2: 6022.284 ops/ms
+# Warmup Iteration   3: 6053.456 ops/ms
+# Warmup Iteration   4: 5774.581 ops/ms
+# Warmup Iteration   5: 7371.611 ops/ms
+# Warmup Iteration   6: 8331.003 ops/ms
+# Warmup Iteration   7: 8671.364 ops/ms
+# Warmup Iteration   8: 8687.907 ops/ms
+# Warmup Iteration   9: 8927.925 ops/ms
+# Warmup Iteration  10: 12196.269 ops/ms
+Iteration   1: 13217.499 ops/ms
+Iteration   2: 13218.555 ops/ms
+Iteration   3: 12039.816 ops/ms
+Iteration   4: 12760.047 ops/ms
+Iteration   5: 12920.564 ops/ms
+Iteration   6: 12836.598 ops/ms
+Iteration   7: 13180.078 ops/ms
+Iteration   8: 13161.445 ops/ms
+Iteration   9: 12654.320 ops/ms
+Iteration  10: 12519.778 ops/ms
+Iteration  11: 12712.108 ops/ms
+Iteration  12: 13425.559 ops/ms
+Iteration  13: 13331.128 ops/ms
+Iteration  14: 13619.266 ops/ms
+Iteration  15: 12506.216 ops/ms
+Iteration  16: 12404.046 ops/ms
+Iteration  17: 11169.648 ops/ms
+Iteration  18: 12540.101 ops/ms
+Iteration  19: 12703.323 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+13263.738 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_after":
+  12466.478 ±(99.9%) 318.694 ops/ms [Average]
+  (min, avg, max) = (11169.648, 12466.478, 13619.266), stdev = 566.479
+  CI (99.9%): [12147.784, 12785.172] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_after
+# Parameters: (repositorySupplier = CONCURRENT_HASH_MAP, size = 1000)
+
+# Run progress: 26.67% complete, ETA 00:22:23
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+17159.309 ops/ms
+# Warmup Iteration   2: 16800.627 ops/ms
+# Warmup Iteration   3: 17099.466 ops/ms
+# Warmup Iteration   4: 18248.880 ops/ms
+# Warmup Iteration   5: 18234.637 ops/ms
+# Warmup Iteration   6: 18111.068 ops/ms
+# Warmup Iteration   7: 18160.050 ops/ms
+# Warmup Iteration   8: 18127.412 ops/ms
+# Warmup Iteration   9: 18291.780 ops/ms
+# Warmup Iteration  10: 18078.809 ops/ms
+Iteration   1: 18257.915 ops/ms
+Iteration   2: 18288.220 ops/ms
+Iteration   3: 18303.725 ops/ms
+Iteration   4: 18284.506 ops/ms
+Iteration   5: 17737.383 ops/ms
+Iteration   6: 18128.053 ops/ms
+Iteration   7: 18039.622 ops/ms
+Iteration   8: 18021.192 ops/ms
+Iteration   9: 18291.384 ops/ms
+Iteration  10: 16757.467 ops/ms
+Iteration  11: 16366.877 ops/ms
+Iteration  12: 16354.376 ops/ms
+Iteration  13: 16667.013 ops/ms
+Iteration  14: 18314.705 ops/ms
+Iteration  15: 17643.119 ops/ms
+Iteration  16: 18320.887 ops/ms
+Iteration  17: 18303.938 ops/ms
+Iteration  18: 18265.398 ops/ms
+Iteration  19: 18050.229 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+18322.593 ops/ms
+
+# Run progress: 28.33% complete, ETA 00:21:52
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+16842.445 ops/ms
+# Warmup Iteration   2: 15821.521 ops/ms
+# Warmup Iteration   3: 15541.355 ops/ms
+# Warmup Iteration   4: 16403.683 ops/ms
+# Warmup Iteration   5: 17627.879 ops/ms
+# Warmup Iteration   6: 18029.575 ops/ms
+# Warmup Iteration   7: 18432.590 ops/ms
+# Warmup Iteration   8: 18282.036 ops/ms
+# Warmup Iteration   9: 18209.083 ops/ms
+# Warmup Iteration  10: 18332.923 ops/ms
+Iteration   1: 17946.483 ops/ms
+Iteration   2: 18346.049 ops/ms
+Iteration   3: 17846.262 ops/ms
+Iteration   4: 16500.468 ops/ms
+Iteration   5: 16486.744 ops/ms
+Iteration   6: 16308.563 ops/ms
+Iteration   7: 17287.517 ops/ms
+Iteration   8: 17983.165 ops/ms
+Iteration   9: 18215.526 ops/ms
+Iteration  10: 18250.285 ops/ms
+Iteration  11: 17010.519 ops/ms
+Iteration  12: 16366.051 ops/ms
+Iteration  13: 16132.122 ops/ms
+Iteration  14: 16359.937 ops/ms
+Iteration  15: 17459.364 ops/ms
+Iteration  16: 18092.176 ops/ms
+Iteration  17: 18247.330 ops/ms
+Iteration  18: 18065.844 ops/ms
+Iteration  19: 17766.753 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+16367.259 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_after":
+  17593.925 ±(99.9%) 443.814 ops/ms [Average]
+  (min, avg, max) = (16132.122, 17593.925, 18346.049), stdev = 788.878
+  CI (99.9%): [17150.112, 18037.739] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_after
+# Parameters: (repositorySupplier = CONCURRENT_HASH_MAP, size = 10000)
+
+# Run progress: 30.00% complete, ETA 00:21:22
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+15095.659 ops/ms
+# Warmup Iteration   2: 16231.387 ops/ms
+# Warmup Iteration   3: 17278.412 ops/ms
+# Warmup Iteration   4: 18572.492 ops/ms
+# Warmup Iteration   5: 18172.426 ops/ms
+# Warmup Iteration   6: 18163.255 ops/ms
+# Warmup Iteration   7: 18319.927 ops/ms
+# Warmup Iteration   8: 18198.922 ops/ms
+# Warmup Iteration   9: 18315.602 ops/ms
+# Warmup Iteration  10: 18476.573 ops/ms
+Iteration   1: 18306.332 ops/ms
+Iteration   2: 18358.039 ops/ms
+Iteration   3: 17939.510 ops/ms
+Iteration   4: 18417.888 ops/ms
+Iteration   5: 17880.393 ops/ms
+Iteration   6: 18306.116 ops/ms
+Iteration   7: 17305.676 ops/ms
+Iteration   8: 17800.412 ops/ms
+Iteration   9: 18024.571 ops/ms
+Iteration  10: 18236.974 ops/ms
+Iteration  11: 18234.002 ops/ms
+Iteration  12: 18287.330 ops/ms
+Iteration  13: 18067.510 ops/ms
+Iteration  14: 18426.745 ops/ms
+Iteration  15: 18268.604 ops/ms
+Iteration  16: 18377.064 ops/ms
+Iteration  17: 18040.029 ops/ms
+Iteration  18: 18344.742 ops/ms
+Iteration  19: 18225.852 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+18190.270 ops/ms
+
+# Run progress: 31.67% complete, ETA 00:20:51
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+15408.830 ops/ms
+# Warmup Iteration   2: 15366.343 ops/ms
+# Warmup Iteration   3: 15541.701 ops/ms
+# Warmup Iteration   4: 17619.734 ops/ms
+# Warmup Iteration   5: 18596.230 ops/ms
+# Warmup Iteration   6: 18382.527 ops/ms
+# Warmup Iteration   7: 18604.396 ops/ms
+# Warmup Iteration   8: 18601.972 ops/ms
+# Warmup Iteration   9: 18501.436 ops/ms
+# Warmup Iteration  10: 18425.606 ops/ms
+Iteration   1: 17584.431 ops/ms
+Iteration   2: 17581.742 ops/ms
+Iteration   3: 17540.624 ops/ms
+Iteration   4: 18543.119 ops/ms
+Iteration   5: 18519.223 ops/ms
+Iteration   6: 18311.772 ops/ms
+Iteration   7: 18287.006 ops/ms
+Iteration   8: 18260.350 ops/ms
+Iteration   9: 18320.782 ops/ms
+Iteration  10: 17899.982 ops/ms
+Iteration  11: 17783.756 ops/ms
+Iteration  12: 17603.581 ops/ms
+Iteration  13: 18100.734 ops/ms
+Iteration  14: 18292.401 ops/ms
+Iteration  15: 18459.929 ops/ms
+Iteration  16: 18476.484 ops/ms
+Iteration  17: 18207.769 ops/ms
+Iteration  18: 17375.239 ops/ms
+Iteration  19: 16424.742 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+16262.030 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_after":
+  18021.844 ±(99.9%) 284.464 ops/ms [Average]
+  (min, avg, max) = (16262.030, 18021.844, 18543.119), stdev = 505.635
+  CI (99.9%): [17737.380, 18306.308] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_before
+# Parameters: (repositorySupplier = HASH_SET, size = 1000)
+
+# Run progress: 33.33% complete, ETA 00:20:20
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+21067.376 ops/ms
+# Warmup Iteration   2: 23476.324 ops/ms
+# Warmup Iteration   3: 25185.700 ops/ms
+# Warmup Iteration   4: 25510.033 ops/ms
+# Warmup Iteration   5: 26021.180 ops/ms
+# Warmup Iteration   6: 25959.582 ops/ms
+# Warmup Iteration   7: 25811.067 ops/ms
+# Warmup Iteration   8: 24832.899 ops/ms
+# Warmup Iteration   9: 25567.003 ops/ms
+# Warmup Iteration  10: 25622.440 ops/ms
+Iteration   1: 25852.264 ops/ms
+Iteration   2: 25704.088 ops/ms
+Iteration   3: 22977.804 ops/ms
+Iteration   4: 21962.955 ops/ms
+Iteration   5: 25702.720 ops/ms
+Iteration   6: 25278.491 ops/ms
+Iteration   7: 25331.796 ops/ms
+Iteration   8: 25567.799 ops/ms
+Iteration   9: 26115.741 ops/ms
+Iteration  10: 24870.371 ops/ms
+Iteration  11: 24939.211 ops/ms
+Iteration  12: 26144.908 ops/ms
+Iteration  13: 25511.432 ops/ms
+Iteration  14: 25481.329 ops/ms
+Iteration  15: 21666.358 ops/ms
+Iteration  16: 21599.925 ops/ms
+Iteration  17: 21764.897 ops/ms
+Iteration  18: 21754.371 ops/ms
+Iteration  19: 22003.209 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+21819.194 ops/ms
+
+# Run progress: 35.00% complete, ETA 00:19:50
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+23102.320 ops/ms
+# Warmup Iteration   2: 23729.931 ops/ms
+# Warmup Iteration   3: 25340.462 ops/ms
+# Warmup Iteration   4: 25773.726 ops/ms
+# Warmup Iteration   5: 25827.101 ops/ms
+# Warmup Iteration   6: 25838.787 ops/ms
+# Warmup Iteration   7: 25875.131 ops/ms
+# Warmup Iteration   8: 25904.654 ops/ms
+# Warmup Iteration   9: 25935.141 ops/ms
+# Warmup Iteration  10: 26060.021 ops/ms
+Iteration   1: 25548.754 ops/ms
+Iteration   2: 25838.731 ops/ms
+Iteration   3: 25380.541 ops/ms
+Iteration   4: 25383.258 ops/ms
+Iteration   5: 25703.078 ops/ms
+Iteration   6: 25299.074 ops/ms
+Iteration   7: 26061.171 ops/ms
+Iteration   8: 24279.098 ops/ms
+Iteration   9: 23923.520 ops/ms
+Iteration  10: 25751.506 ops/ms
+Iteration  11: 26101.925 ops/ms
+Iteration  12: 26018.170 ops/ms
+Iteration  13: 25245.323 ops/ms
+Iteration  14: 25200.414 ops/ms
+Iteration  15: 22480.218 ops/ms
+Iteration  16: 22804.608 ops/ms
+Iteration  17: 22677.024 ops/ms
+Iteration  18: 22628.130 ops/ms
+Iteration  19: 22950.978 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+23004.432 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_before":
+  24358.220 ±(99.9%) 913.731 ops/ms [Average]
+  (min, avg, max) = (21599.925, 24358.220, 26144.908), stdev = 1624.157
+  CI (99.9%): [23444.489, 25271.952] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_before
+# Parameters: (repositorySupplier = HASH_SET, size = 10000)
+
+# Run progress: 36.67% complete, ETA 00:19:19
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+22476.047 ops/ms
+# Warmup Iteration   2: 21751.097 ops/ms
+# Warmup Iteration   3: 24650.840 ops/ms
+# Warmup Iteration   4: 25104.065 ops/ms
+# Warmup Iteration   5: 25118.056 ops/ms
+# Warmup Iteration   6: 24760.633 ops/ms
+# Warmup Iteration   7: 25179.640 ops/ms
+# Warmup Iteration   8: 25071.899 ops/ms
+# Warmup Iteration   9: 25166.087 ops/ms
+# Warmup Iteration  10: 25406.927 ops/ms
+Iteration   1: 24762.996 ops/ms
+Iteration   2: 25381.424 ops/ms
+Iteration   3: 25074.573 ops/ms
+Iteration   4: 25075.698 ops/ms
+Iteration   5: 25423.340 ops/ms
+Iteration   6: 25014.261 ops/ms
+Iteration   7: 25503.400 ops/ms
+Iteration   8: 24929.118 ops/ms
+Iteration   9: 25449.597 ops/ms
+Iteration  10: 25117.382 ops/ms
+Iteration  11: 24932.488 ops/ms
+Iteration  12: 25478.155 ops/ms
+Iteration  13: 25155.147 ops/ms
+Iteration  14: 25322.580 ops/ms
+Iteration  15: 21983.546 ops/ms
+Iteration  16: 21981.101 ops/ms
+Iteration  17: 22325.545 ops/ms
+Iteration  18: 22076.935 ops/ms
+Iteration  19: 22360.092 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+22352.991 ops/ms
+
+# Run progress: 38.33% complete, ETA 00:18:48
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+22580.983 ops/ms
+# Warmup Iteration   2: 22918.830 ops/ms
+# Warmup Iteration   3: 24005.624 ops/ms
+# Warmup Iteration   4: 24789.446 ops/ms
+# Warmup Iteration   5: 25059.782 ops/ms
+# Warmup Iteration   6: 24951.781 ops/ms
+# Warmup Iteration   7: 25242.797 ops/ms
+# Warmup Iteration   8: 25086.909 ops/ms
+# Warmup Iteration   9: 25337.581 ops/ms
+# Warmup Iteration  10: 25406.112 ops/ms
+Iteration   1: 24629.096 ops/ms
+Iteration   2: 25189.859 ops/ms
+Iteration   3: 24723.266 ops/ms
+Iteration   4: 25331.214 ops/ms
+Iteration   5: 25666.514 ops/ms
+Iteration   6: 25437.744 ops/ms
+Iteration   7: 25523.121 ops/ms
+Iteration   8: 25742.796 ops/ms
+Iteration   9: 25093.069 ops/ms
+Iteration  10: 25350.740 ops/ms
+Iteration  11: 25519.322 ops/ms
+Iteration  12: 24630.030 ops/ms
+Iteration  13: 25459.538 ops/ms
+Iteration  14: 25692.438 ops/ms
+Iteration  15: 23484.221 ops/ms
+Iteration  16: 22495.448 ops/ms
+Iteration  17: 22510.594 ops/ms
+Iteration  18: 22305.092 ops/ms
+Iteration  19: 22045.137 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+22463.625 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_before":
+  24374.831 ±(99.9%) 773.508 ops/ms [Average]
+  (min, avg, max) = (21981.101, 24374.831, 25742.796), stdev = 1374.909
+  CI (99.9%): [23601.323, 25148.338] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_before
+# Parameters: (repositorySupplier = TREE_SET, size = 1000)
+
+# Run progress: 40.00% complete, ETA 00:18:18
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+18666.365 ops/ms
+# Warmup Iteration   2: 19700.528 ops/ms
+# Warmup Iteration   3: 18407.322 ops/ms
+# Warmup Iteration   4: 19886.771 ops/ms
+# Warmup Iteration   5: 19901.793 ops/ms
+# Warmup Iteration   6: 20024.577 ops/ms
+# Warmup Iteration   7: 19784.446 ops/ms
+# Warmup Iteration   8: 20030.631 ops/ms
+# Warmup Iteration   9: 19802.574 ops/ms
+# Warmup Iteration  10: 19812.634 ops/ms
+Iteration   1: 19730.111 ops/ms
+Iteration   2: 19951.690 ops/ms
+Iteration   3: 20042.767 ops/ms
+Iteration   4: 19835.741 ops/ms
+Iteration   5: 19992.967 ops/ms
+Iteration   6: 20053.183 ops/ms
+Iteration   7: 19735.307 ops/ms
+Iteration   8: 19607.894 ops/ms
+Iteration   9: 19908.996 ops/ms
+Iteration  10: 19806.654 ops/ms
+Iteration  11: 20072.490 ops/ms
+Iteration  12: 19898.846 ops/ms
+Iteration  13: 19970.440 ops/ms
+Iteration  14: 19993.746 ops/ms
+Iteration  15: 20008.632 ops/ms
+Iteration  16: 20012.691 ops/ms
+Iteration  17: 19944.378 ops/ms
+Iteration  18: 19961.374 ops/ms
+Iteration  19: 19745.613 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+19969.529 ops/ms
+
+# Run progress: 41.67% complete, ETA 00:17:47
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+18332.878 ops/ms
+# Warmup Iteration   2: 19848.812 ops/ms
+# Warmup Iteration   3: 19935.713 ops/ms
+# Warmup Iteration   4: 19943.881 ops/ms
+# Warmup Iteration   5: 19948.615 ops/ms
+# Warmup Iteration   6: 19971.272 ops/ms
+# Warmup Iteration   7: 19535.622 ops/ms
+# Warmup Iteration   8: 19904.464 ops/ms
+# Warmup Iteration   9: 19983.365 ops/ms
+# Warmup Iteration  10: 19870.683 ops/ms
+Iteration   1: 19723.706 ops/ms
+Iteration   2: 18564.899 ops/ms
+Iteration   3: 19529.508 ops/ms
+Iteration   4: 19645.463 ops/ms
+Iteration   5: 19896.769 ops/ms
+Iteration   6: 19946.792 ops/ms
+Iteration   7: 19692.569 ops/ms
+Iteration   8: 20013.185 ops/ms
+Iteration   9: 19837.109 ops/ms
+Iteration  10: 19976.944 ops/ms
+Iteration  11: 20012.417 ops/ms
+Iteration  12: 20058.763 ops/ms
+Iteration  13: 19820.430 ops/ms
+Iteration  14: 19713.204 ops/ms
+Iteration  15: 19986.503 ops/ms
+Iteration  16: 20045.773 ops/ms
+Iteration  17: 19933.382 ops/ms
+Iteration  18: 19944.839 ops/ms
+Iteration  19: 19669.325 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+19985.448 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_before":
+  19856.002 ±(99.9%) 142.135 ops/ms [Average]
+  (min, avg, max) = (18564.899, 19856.002, 20072.490), stdev = 252.645
+  CI (99.9%): [19713.867, 19998.137] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_before
+# Parameters: (repositorySupplier = TREE_SET, size = 10000)
+
+# Run progress: 43.33% complete, ETA 00:17:17
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+12623.541 ops/ms
+# Warmup Iteration   2: 13153.043 ops/ms
+# Warmup Iteration   3: 15699.346 ops/ms
+# Warmup Iteration   4: 14972.551 ops/ms
+# Warmup Iteration   5: 15283.876 ops/ms
+# Warmup Iteration   6: 16033.099 ops/ms
+# Warmup Iteration   7: 17253.777 ops/ms
+# Warmup Iteration   8: 17816.861 ops/ms
+# Warmup Iteration   9: 17860.705 ops/ms
+# Warmup Iteration  10: 17867.633 ops/ms
+Iteration   1: 16920.842 ops/ms
+Iteration   2: 15802.926 ops/ms
+Iteration   3: 16036.486 ops/ms
+Iteration   4: 16043.536 ops/ms
+Iteration   5: 17191.593 ops/ms
+Iteration   6: 17635.476 ops/ms
+Iteration   7: 17875.688 ops/ms
+Iteration   8: 17891.646 ops/ms
+Iteration   9: 16862.395 ops/ms
+Iteration  10: 16016.386 ops/ms
+Iteration  11: 16022.870 ops/ms
+Iteration  12: 15991.375 ops/ms
+Iteration  13: 16902.475 ops/ms
+Iteration  14: 17851.550 ops/ms
+Iteration  15: 17736.980 ops/ms
+Iteration  16: 17829.258 ops/ms
+Iteration  17: 17867.780 ops/ms
+Iteration  18: 17855.564 ops/ms
+Iteration  19: 17875.137 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+17900.498 ops/ms
+
+# Run progress: 45.00% complete, ETA 00:16:46
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+12787.709 ops/ms
+# Warmup Iteration   2: 13225.273 ops/ms
+# Warmup Iteration   3: 16638.352 ops/ms
+# Warmup Iteration   4: 17898.896 ops/ms
+# Warmup Iteration   5: 17244.884 ops/ms
+# Warmup Iteration   6: 17754.143 ops/ms
+# Warmup Iteration   7: 17798.713 ops/ms
+# Warmup Iteration   8: 17485.044 ops/ms
+# Warmup Iteration   9: 17797.090 ops/ms
+# Warmup Iteration  10: 17863.316 ops/ms
+Iteration   1: 17792.928 ops/ms
+Iteration   2: 17799.007 ops/ms
+Iteration   3: 17799.223 ops/ms
+Iteration   4: 17710.433 ops/ms
+Iteration   5: 17632.877 ops/ms
+Iteration   6: 17921.297 ops/ms
+Iteration   7: 17901.472 ops/ms
+Iteration   8: 17816.645 ops/ms
+Iteration   9: 17481.987 ops/ms
+Iteration  10: 17798.969 ops/ms
+Iteration  11: 17752.179 ops/ms
+Iteration  12: 17437.443 ops/ms
+Iteration  13: 17742.341 ops/ms
+Iteration  14: 17892.828 ops/ms
+Iteration  15: 17653.009 ops/ms
+Iteration  16: 17746.209 ops/ms
+Iteration  17: 17765.406 ops/ms
+Iteration  18: 17783.469 ops/ms
+Iteration  19: 17633.299 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+17911.985 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_before":
+  17427.087 ±(99.9%) 376.919 ops/ms [Average]
+  (min, avg, max) = (15802.926, 17427.087, 17921.297), stdev = 669.973
+  CI (99.9%): [17050.167, 17804.006] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_before
+# Parameters: (repositorySupplier = ARRAY_LIST, size = 1000)
+
+# Run progress: 46.67% complete, ETA 00:16:15
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+14428.812 ops/ms
+# Warmup Iteration   2: 22177.487 ops/ms
+# Warmup Iteration   3: 24764.857 ops/ms
+# Warmup Iteration   4: 25531.267 ops/ms
+# Warmup Iteration   5: 24670.408 ops/ms
+# Warmup Iteration   6: 22476.199 ops/ms
+# Warmup Iteration   7: 23300.967 ops/ms
+# Warmup Iteration   8: 24010.493 ops/ms
+# Warmup Iteration   9: 24031.375 ops/ms
+# Warmup Iteration  10: 22849.262 ops/ms
+Iteration   1: 21799.077 ops/ms
+Iteration   2: 21834.663 ops/ms
+Iteration   3: 21773.305 ops/ms
+Iteration   4: 22360.573 ops/ms
+Iteration   5: 23732.260 ops/ms
+Iteration   6: 24065.396 ops/ms
+Iteration   7: 23136.753 ops/ms
+Iteration   8: 22623.224 ops/ms
+Iteration   9: 21256.480 ops/ms
+Iteration  10: 21271.435 ops/ms
+Iteration  11: 21224.893 ops/ms
+Iteration  12: 22095.006 ops/ms
+Iteration  13: 23475.163 ops/ms
+Iteration  14: 23263.164 ops/ms
+Iteration  15: 23172.953 ops/ms
+Iteration  16: 22229.756 ops/ms
+Iteration  17: 21200.793 ops/ms
+Iteration  18: 21249.912 ops/ms
+Iteration  19: 21298.608 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+22006.242 ops/ms
+
+# Run progress: 48.33% complete, ETA 00:15:45
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+15173.931 ops/ms
+# Warmup Iteration   2: 23648.067 ops/ms
+# Warmup Iteration   3: 26902.256 ops/ms
+# Warmup Iteration   4: 26875.703 ops/ms
+# Warmup Iteration   5: 25353.796 ops/ms
+# Warmup Iteration   6: 24098.537 ops/ms
+# Warmup Iteration   7: 24082.221 ops/ms
+# Warmup Iteration   8: 24187.940 ops/ms
+# Warmup Iteration   9: 22108.223 ops/ms
+# Warmup Iteration  10: 22112.343 ops/ms
+Iteration   1: 22212.104 ops/ms
+Iteration   2: 24087.838 ops/ms
+Iteration   3: 24528.522 ops/ms
+Iteration   4: 24677.261 ops/ms
+Iteration   5: 24250.363 ops/ms
+Iteration   6: 22196.112 ops/ms
+Iteration   7: 20381.939 ops/ms
+Iteration   8: 20464.517 ops/ms
+Iteration   9: 20270.003 ops/ms
+Iteration  10: 22699.366 ops/ms
+Iteration  11: 22587.670 ops/ms
+Iteration  12: 21921.397 ops/ms
+Iteration  13: 22520.560 ops/ms
+Iteration  14: 21796.363 ops/ms
+Iteration  15: 21870.409 ops/ms
+Iteration  16: 22074.462 ops/ms
+Iteration  17: 22340.246 ops/ms
+Iteration  18: 21114.221 ops/ms
+Iteration  19: 20334.526 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+20465.527 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_before":
+  22196.577 ±(99.9%) 664.922 ops/ms [Average]
+  (min, avg, max) = (20270.003, 22196.577, 24677.261), stdev = 1181.898
+  CI (99.9%): [21531.655, 22861.499] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_before
+# Parameters: (repositorySupplier = ARRAY_LIST, size = 10000)
+
+# Run progress: 50.00% complete, ETA 00:15:15
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+5617.936 ops/ms
+# Warmup Iteration   2: 6907.346 ops/ms
+# Warmup Iteration   3: 6741.713 ops/ms
+# Warmup Iteration   4: 6599.354 ops/ms
+# Warmup Iteration   5: 8493.585 ops/ms
+# Warmup Iteration   6: 10749.255 ops/ms
+# Warmup Iteration   7: 10571.142 ops/ms
+# Warmup Iteration   8: 9711.926 ops/ms
+# Warmup Iteration   9: 11543.979 ops/ms
+# Warmup Iteration  10: 8275.743 ops/ms
+Iteration   1: 8270.234 ops/ms
+Iteration   2: 8307.962 ops/ms
+Iteration   3: 11237.503 ops/ms
+Iteration   4: 14431.432 ops/ms
+Iteration   5: 14829.720 ops/ms
+Iteration   6: 14814.671 ops/ms
+Iteration   7: 13929.775 ops/ms
+Iteration   8: 13803.496 ops/ms
+Iteration   9: 13712.268 ops/ms
+Iteration  10: 12938.957 ops/ms
+Iteration  11: 13861.189 ops/ms
+Iteration  12: 14363.114 ops/ms
+Iteration  13: 14440.694 ops/ms
+Iteration  14: 14525.623 ops/ms
+Iteration  15: 13957.020 ops/ms
+Iteration  16: 13385.932 ops/ms
+Iteration  17: 13450.188 ops/ms
+Iteration  18: 13688.639 ops/ms
+Iteration  19: 14356.992 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+14699.384 ops/ms
+
+# Run progress: 51.67% complete, ETA 00:14:44
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+5150.025 ops/ms
+# Warmup Iteration   2: 5960.971 ops/ms
+# Warmup Iteration   3: 5578.846 ops/ms
+# Warmup Iteration   4: 5368.987 ops/ms
+# Warmup Iteration   5: 7451.013 ops/ms
+# Warmup Iteration   6: 10985.129 ops/ms
+# Warmup Iteration   7: 11119.208 ops/ms
+# Warmup Iteration   8: 10772.248 ops/ms
+# Warmup Iteration   9: 13628.866 ops/ms
+# Warmup Iteration  10: 13550.690 ops/ms
+Iteration   1: 13490.086 ops/ms
+Iteration   2: 13266.887 ops/ms
+Iteration   3: 12897.096 ops/ms
+Iteration   4: 13245.438 ops/ms
+Iteration   5: 13930.545 ops/ms
+Iteration   6: 14099.227 ops/ms
+Iteration   7: 14017.121 ops/ms
+Iteration   8: 13717.147 ops/ms
+Iteration   9: 13487.798 ops/ms
+Iteration  10: 13132.092 ops/ms
+Iteration  11: 13122.166 ops/ms
+Iteration  12: 13126.406 ops/ms
+Iteration  13: 13612.457 ops/ms
+Iteration  14: 13762.778 ops/ms
+Iteration  15: 13818.292 ops/ms
+Iteration  16: 13764.017 ops/ms
+Iteration  17: 13375.045 ops/ms
+Iteration  18: 13097.659 ops/ms
+Iteration  19: 12890.739 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+13132.170 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_before":
+  13399.749 ±(99.9%) 764.230 ops/ms [Average]
+  (min, avg, max) = (8270.234, 13399.749, 14829.720), stdev = 1358.418
+  CI (99.9%): [12635.519, 14163.979] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_before
+# Parameters: (repositorySupplier = LINKED_LIST, size = 1000)
+
+# Run progress: 53.33% complete, ETA 00:14:13
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+14231.095 ops/ms
+# Warmup Iteration   2: 22910.630 ops/ms
+# Warmup Iteration   3: 24770.459 ops/ms
+# Warmup Iteration   4: 20186.482 ops/ms
+# Warmup Iteration   5: 18201.093 ops/ms
+# Warmup Iteration   6: 16535.834 ops/ms
+# Warmup Iteration   7: 18482.259 ops/ms
+# Warmup Iteration   8: 16907.938 ops/ms
+# Warmup Iteration   9: 17315.363 ops/ms
+# Warmup Iteration  10: 19514.872 ops/ms
+Iteration   1: 19708.513 ops/ms
+Iteration   2: 18104.970 ops/ms
+Iteration   3: 18055.168 ops/ms
+Iteration   4: 17101.397 ops/ms
+Iteration   5: 19351.324 ops/ms
+Iteration   6: 19730.651 ops/ms
+Iteration   7: 15935.033 ops/ms
+Iteration   8: 16172.411 ops/ms
+Iteration   9: 16651.913 ops/ms
+Iteration  10: 16344.545 ops/ms
+Iteration  11: 18042.921 ops/ms
+Iteration  12: 17123.791 ops/ms
+Iteration  13: 17121.958 ops/ms
+Iteration  14: 18070.116 ops/ms
+Iteration  15: 16658.308 ops/ms
+Iteration  16: 18410.259 ops/ms
+Iteration  17: 17872.297 ops/ms
+Iteration  18: 19042.358 ops/ms
+Iteration  19: 16834.657 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+16190.329 ops/ms
+
+# Run progress: 55.00% complete, ETA 00:13:43
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+12139.160 ops/ms
+# Warmup Iteration   2: 17119.294 ops/ms
+# Warmup Iteration   3: 24613.487 ops/ms
+# Warmup Iteration   4: 23651.181 ops/ms
+# Warmup Iteration   5: 20482.369 ops/ms
+# Warmup Iteration   6: 18648.754 ops/ms
+# Warmup Iteration   7: 18647.405 ops/ms
+# Warmup Iteration   8: 18500.700 ops/ms
+# Warmup Iteration   9: 18687.922 ops/ms
+# Warmup Iteration  10: 19997.739 ops/ms
+Iteration   1: 20375.735 ops/ms
+Iteration   2: 18717.295 ops/ms
+Iteration   3: 19881.427 ops/ms
+Iteration   4: 18555.750 ops/ms
+Iteration   5: 17581.077 ops/ms
+Iteration   6: 16809.263 ops/ms
+Iteration   7: 18435.564 ops/ms
+Iteration   8: 18846.084 ops/ms
+Iteration   9: 20593.395 ops/ms
+Iteration  10: 21714.143 ops/ms
+Iteration  11: 19238.268 ops/ms
+Iteration  12: 19260.142 ops/ms
+Iteration  13: 19113.625 ops/ms
+Iteration  14: 19600.804 ops/ms
+Iteration  15: 19874.303 ops/ms
+Iteration  16: 19260.561 ops/ms
+Iteration  17: 18446.558 ops/ms
+Iteration  18: 18963.494 ops/ms
+Iteration  19: 18721.586 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+18428.704 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_before":
+  18373.517 ±(99.9%) 760.564 ops/ms [Average]
+  (min, avg, max) = (15935.033, 18373.517, 21714.143), stdev = 1351.901
+  CI (99.9%): [17612.954, 19134.081] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_before
+# Parameters: (repositorySupplier = LINKED_LIST, size = 10000)
+
+# Run progress: 56.67% complete, ETA 00:13:13
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+5400.971 ops/ms
+# Warmup Iteration   2: 6198.871 ops/ms
+# Warmup Iteration   3: 6349.117 ops/ms
+# Warmup Iteration   4: 6183.970 ops/ms
+# Warmup Iteration   5: 6405.152 ops/ms
+# Warmup Iteration   6: 10144.963 ops/ms
+# Warmup Iteration   7: 10260.821 ops/ms
+# Warmup Iteration   8: 9515.588 ops/ms
+# Warmup Iteration   9: 8584.026 ops/ms
+# Warmup Iteration  10: 7700.145 ops/ms
+Iteration   1: 8489.789 ops/ms
+Iteration   2: 8769.229 ops/ms
+Iteration   3: 8592.385 ops/ms
+Iteration   4: 8935.701 ops/ms
+Iteration   5: 8875.799 ops/ms
+Iteration   6: 8935.867 ops/ms
+Iteration   7: 8525.123 ops/ms
+Iteration   8: 8489.390 ops/ms
+Iteration   9: 8183.865 ops/ms
+Iteration  10: 8626.724 ops/ms
+Iteration  11: 8882.012 ops/ms
+Iteration  12: 10072.841 ops/ms
+Iteration  13: 8916.310 ops/ms
+Iteration  14: 8921.819 ops/ms
+Iteration  15: 9344.904 ops/ms
+Iteration  16: 9225.203 ops/ms
+Iteration  17: 9619.750 ops/ms
+Iteration  18: 9903.316 ops/ms
+Iteration  19: 9526.087 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+9644.665 ops/ms
+
+# Run progress: 58.33% complete, ETA 00:12:42
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+4775.626 ops/ms
+# Warmup Iteration   2: 5357.500 ops/ms
+# Warmup Iteration   3: 5614.661 ops/ms
+# Warmup Iteration   4: 5418.494 ops/ms
+# Warmup Iteration   5: 5903.625 ops/ms
+# Warmup Iteration   6: 7857.507 ops/ms
+# Warmup Iteration   7: 8551.532 ops/ms
+# Warmup Iteration   8: 8616.465 ops/ms
+# Warmup Iteration   9: 7659.228 ops/ms
+# Warmup Iteration  10: 8981.607 ops/ms
+Iteration   1: 9291.001 ops/ms
+Iteration   2: 9165.201 ops/ms
+Iteration   3: 9807.968 ops/ms
+Iteration   4: 9717.520 ops/ms
+Iteration   5: 9968.810 ops/ms
+Iteration   6: 9764.891 ops/ms
+Iteration   7: 9338.259 ops/ms
+Iteration   8: 9231.740 ops/ms
+Iteration   9: 9229.204 ops/ms
+Iteration  10: 9264.342 ops/ms
+Iteration  11: 9257.189 ops/ms
+Iteration  12: 9952.521 ops/ms
+Iteration  13: 9972.568 ops/ms
+Iteration  14: 9629.997 ops/ms
+Iteration  15: 9307.670 ops/ms
+Iteration  16: 9180.229 ops/ms
+Iteration  17: 9028.454 ops/ms
+Iteration  18: 8673.837 ops/ms
+Iteration  19: 9918.138 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+10120.024 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_before":
+  9257.509 ±(99.9%) 286.646 ops/ms [Average]
+  (min, avg, max) = (8183.865, 9257.509, 10120.024), stdev = 509.513
+  CI (99.9%): [8970.863, 9544.155] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_before
+# Parameters: (repositorySupplier = CONCURRENT_HASH_MAP, size = 1000)
+
+# Run progress: 60.00% complete, ETA 00:12:12
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+14159.457 ops/ms
+# Warmup Iteration   2: 14141.374 ops/ms
+# Warmup Iteration   3: 14494.324 ops/ms
+# Warmup Iteration   4: 14951.194 ops/ms
+# Warmup Iteration   5: 15234.496 ops/ms
+# Warmup Iteration   6: 15040.935 ops/ms
+# Warmup Iteration   7: 15272.644 ops/ms
+# Warmup Iteration   8: 15170.014 ops/ms
+# Warmup Iteration   9: 14775.018 ops/ms
+# Warmup Iteration  10: 15245.700 ops/ms
+Iteration   1: 14889.490 ops/ms
+Iteration   2: 15208.651 ops/ms
+Iteration   3: 15176.270 ops/ms
+Iteration   4: 14807.578 ops/ms
+Iteration   5: 15213.486 ops/ms
+Iteration   6: 15184.277 ops/ms
+Iteration   7: 15121.535 ops/ms
+Iteration   8: 15178.338 ops/ms
+Iteration   9: 14692.740 ops/ms
+Iteration  10: 15245.504 ops/ms
+Iteration  11: 15137.310 ops/ms
+Iteration  12: 15062.430 ops/ms
+Iteration  13: 15147.720 ops/ms
+Iteration  14: 15080.811 ops/ms
+Iteration  15: 15001.797 ops/ms
+Iteration  16: 15040.279 ops/ms
+Iteration  17: 15061.855 ops/ms
+Iteration  18: 15048.115 ops/ms
+Iteration  19: 15154.611 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+15181.595 ops/ms
+
+# Run progress: 61.67% complete, ETA 00:11:41
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+14390.068 ops/ms
+# Warmup Iteration   2: 14346.815 ops/ms
+# Warmup Iteration   3: 14358.189 ops/ms
+# Warmup Iteration   4: 14783.235 ops/ms
+# Warmup Iteration   5: 15192.537 ops/ms
+# Warmup Iteration   6: 15081.625 ops/ms
+# Warmup Iteration   7: 15031.503 ops/ms
+# Warmup Iteration   8: 15225.295 ops/ms
+# Warmup Iteration   9: 15232.187 ops/ms
+# Warmup Iteration  10: 15200.721 ops/ms
+Iteration   1: 15116.550 ops/ms
+Iteration   2: 15143.494 ops/ms
+Iteration   3: 15245.423 ops/ms
+Iteration   4: 15179.991 ops/ms
+Iteration   5: 15128.169 ops/ms
+Iteration   6: 15117.460 ops/ms
+Iteration   7: 14890.564 ops/ms
+Iteration   8: 14985.704 ops/ms
+Iteration   9: 14621.138 ops/ms
+Iteration  10: 14768.825 ops/ms
+Iteration  11: 14676.219 ops/ms
+Iteration  12: 14197.428 ops/ms
+Iteration  13: 14299.425 ops/ms
+Iteration  14: 14205.222 ops/ms
+Iteration  15: 14826.591 ops/ms
+Iteration  16: 14651.393 ops/ms
+Iteration  17: 14849.985 ops/ms
+Iteration  18: 14948.024 ops/ms
+Iteration  19: 14901.072 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+14992.682 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_before":
+  14959.494 ±(99.9%) 152.855 ops/ms [Average]
+  (min, avg, max) = (14197.428, 14959.494, 15245.504), stdev = 271.700
+  CI (99.9%): [14806.638, 15112.349] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_before
+# Parameters: (repositorySupplier = CONCURRENT_HASH_MAP, size = 10000)
+
+# Run progress: 63.33% complete, ETA 00:11:11
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+13195.263 ops/ms
+# Warmup Iteration   2: 13683.548 ops/ms
+# Warmup Iteration   3: 13728.564 ops/ms
+# Warmup Iteration   4: 14096.968 ops/ms
+# Warmup Iteration   5: 14537.486 ops/ms
+# Warmup Iteration   6: 14054.551 ops/ms
+# Warmup Iteration   7: 14322.157 ops/ms
+# Warmup Iteration   8: 14487.971 ops/ms
+# Warmup Iteration   9: 14124.172 ops/ms
+# Warmup Iteration  10: 14387.723 ops/ms
+Iteration   1: 14360.782 ops/ms
+Iteration   2: 14160.264 ops/ms
+Iteration   3: 14526.779 ops/ms
+Iteration   4: 14555.493 ops/ms
+Iteration   5: 14478.438 ops/ms
+Iteration   6: 14372.278 ops/ms
+Iteration   7: 14135.473 ops/ms
+Iteration   8: 14452.338 ops/ms
+Iteration   9: 14372.972 ops/ms
+Iteration  10: 14364.349 ops/ms
+Iteration  11: 14395.740 ops/ms
+Iteration  12: 14266.245 ops/ms
+Iteration  13: 14353.726 ops/ms
+Iteration  14: 14477.042 ops/ms
+Iteration  15: 14177.995 ops/ms
+Iteration  16: 14360.892 ops/ms
+Iteration  17: 14444.440 ops/ms
+Iteration  18: 14345.866 ops/ms
+Iteration  19: 14449.794 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+13955.862 ops/ms
+
+# Run progress: 65.00% complete, ETA 00:10:40
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+13360.474 ops/ms
+# Warmup Iteration   2: 13160.167 ops/ms
+# Warmup Iteration   3: 13268.911 ops/ms
+# Warmup Iteration   4: 13902.106 ops/ms
+# Warmup Iteration   5: 14063.507 ops/ms
+# Warmup Iteration   6: 14057.458 ops/ms
+# Warmup Iteration   7: 13963.020 ops/ms
+# Warmup Iteration   8: 13953.460 ops/ms
+# Warmup Iteration   9: 14228.750 ops/ms
+# Warmup Iteration  10: 13936.648 ops/ms
+Iteration   1: 13962.872 ops/ms
+Iteration   2: 13563.797 ops/ms
+Iteration   3: 14086.550 ops/ms
+Iteration   4: 14125.311 ops/ms
+Iteration   5: 14114.487 ops/ms
+Iteration   6: 14155.439 ops/ms
+Iteration   7: 13811.513 ops/ms
+Iteration   8: 14123.955 ops/ms
+Iteration   9: 14115.364 ops/ms
+Iteration  10: 13911.544 ops/ms
+Iteration  11: 14131.775 ops/ms
+Iteration  12: 14120.330 ops/ms
+Iteration  13: 14118.563 ops/ms
+Iteration  14: 14112.554 ops/ms
+Iteration  15: 14023.230 ops/ms
+Iteration  16: 14026.780 ops/ms
+Iteration  17: 14039.360 ops/ms
+Iteration  18: 13932.257 ops/ms
+Iteration  19: 13911.750 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+13677.007 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_before":
+  14176.780 ±(99.9%) 131.165 ops/ms [Average]
+  (min, avg, max) = (13563.797, 14176.780, 14555.493), stdev = 233.146
+  CI (99.9%): [14045.615, 14307.945] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_existing
+# Parameters: (repositorySupplier = HASH_SET, size = 1000)
+
+# Run progress: 66.67% complete, ETA 00:10:10
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+23528.406 ops/ms
+# Warmup Iteration   2: 24145.178 ops/ms
+# Warmup Iteration   3: 26019.255 ops/ms
+# Warmup Iteration   4: 26354.324 ops/ms
+# Warmup Iteration   5: 24077.783 ops/ms
+# Warmup Iteration   6: 23990.407 ops/ms
+# Warmup Iteration   7: 23586.792 ops/ms
+# Warmup Iteration   8: 24307.239 ops/ms
+# Warmup Iteration   9: 26316.219 ops/ms
+# Warmup Iteration  10: 26327.437 ops/ms
+Iteration   1: 26380.174 ops/ms
+Iteration   2: 26299.302 ops/ms
+Iteration   3: 24409.318 ops/ms
+Iteration   4: 23959.843 ops/ms
+Iteration   5: 23990.688 ops/ms
+Iteration   6: 23943.238 ops/ms
+Iteration   7: 26661.108 ops/ms
+Iteration   8: 26783.767 ops/ms
+Iteration   9: 26556.344 ops/ms
+Iteration  10: 26474.184 ops/ms
+Iteration  11: 25145.172 ops/ms
+Iteration  12: 23764.964 ops/ms
+Iteration  13: 23526.476 ops/ms
+Iteration  14: 23862.561 ops/ms
+Iteration  15: 26956.028 ops/ms
+Iteration  16: 26473.983 ops/ms
+Iteration  17: 26422.066 ops/ms
+Iteration  18: 23993.220 ops/ms
+Iteration  19: 22195.724 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+20940.252 ops/ms
+
+# Run progress: 68.33% complete, ETA 00:09:39
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+20925.673 ops/ms
+# Warmup Iteration   2: 23073.301 ops/ms
+# Warmup Iteration   3: 25373.493 ops/ms
+# Warmup Iteration   4: 26345.568 ops/ms
+# Warmup Iteration   5: 26099.021 ops/ms
+# Warmup Iteration   6: 25999.236 ops/ms
+# Warmup Iteration   7: 26079.397 ops/ms
+# Warmup Iteration   8: 25317.924 ops/ms
+# Warmup Iteration   9: 26239.339 ops/ms
+# Warmup Iteration  10: 26196.180 ops/ms
+Iteration   1: 26528.723 ops/ms
+Iteration   2: 26154.091 ops/ms
+Iteration   3: 26512.608 ops/ms
+Iteration   4: 25866.854 ops/ms
+Iteration   5: 26489.838 ops/ms
+Iteration   6: 26129.577 ops/ms
+Iteration   7: 25700.005 ops/ms
+Iteration   8: 25765.147 ops/ms
+Iteration   9: 25862.117 ops/ms
+Iteration  10: 25317.230 ops/ms
+Iteration  11: 25392.061 ops/ms
+Iteration  12: 25585.033 ops/ms
+Iteration  13: 25815.225 ops/ms
+Iteration  14: 25719.763 ops/ms
+Iteration  15: 26329.282 ops/ms
+Iteration  16: 26007.115 ops/ms
+Iteration  17: 24446.934 ops/ms
+Iteration  18: 22726.390 ops/ms
+Iteration  19: 23038.275 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+22793.072 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_existing":
+  25172.944 ±(99.9%) 833.812 ops/ms [Average]
+  (min, avg, max) = (20940.252, 25172.944, 26956.028), stdev = 1482.100
+  CI (99.9%): [24339.132, 26006.756] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_existing
+# Parameters: (repositorySupplier = HASH_SET, size = 10000)
+
+# Run progress: 70.00% complete, ETA 00:09:09
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+23436.611 ops/ms
+# Warmup Iteration   2: 23738.753 ops/ms
+# Warmup Iteration   3: 25478.196 ops/ms
+# Warmup Iteration   4: 25671.031 ops/ms
+# Warmup Iteration   5: 25744.168 ops/ms
+# Warmup Iteration   6: 25699.482 ops/ms
+# Warmup Iteration   7: 25958.964 ops/ms
+# Warmup Iteration   8: 26156.229 ops/ms
+# Warmup Iteration   9: 25790.795 ops/ms
+# Warmup Iteration  10: 25364.939 ops/ms
+Iteration   1: 25851.516 ops/ms
+Iteration   2: 25971.906 ops/ms
+Iteration   3: 25901.855 ops/ms
+Iteration   4: 25710.420 ops/ms
+Iteration   5: 25504.429 ops/ms
+Iteration   6: 26099.500 ops/ms
+Iteration   7: 25256.928 ops/ms
+Iteration   8: 25673.250 ops/ms
+Iteration   9: 26054.878 ops/ms
+Iteration  10: 25988.186 ops/ms
+Iteration  11: 26062.109 ops/ms
+Iteration  12: 26069.949 ops/ms
+Iteration  13: 25936.495 ops/ms
+Iteration  14: 25704.297 ops/ms
+Iteration  15: 25946.455 ops/ms
+Iteration  16: 22760.205 ops/ms
+Iteration  17: 22722.317 ops/ms
+Iteration  18: 22802.272 ops/ms
+Iteration  19: 22519.496 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+22823.987 ops/ms
+
+# Run progress: 71.67% complete, ETA 00:08:38
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+23539.877 ops/ms
+# Warmup Iteration   2: 23381.852 ops/ms
+# Warmup Iteration   3: 25237.291 ops/ms
+# Warmup Iteration   4: 25789.104 ops/ms
+# Warmup Iteration   5: 25538.798 ops/ms
+# Warmup Iteration   6: 23360.335 ops/ms
+# Warmup Iteration   7: 23326.385 ops/ms
+# Warmup Iteration   8: 22992.433 ops/ms
+# Warmup Iteration   9: 25247.082 ops/ms
+# Warmup Iteration  10: 26231.175 ops/ms
+Iteration   1: 26133.402 ops/ms
+Iteration   2: 25882.779 ops/ms
+Iteration   3: 26263.639 ops/ms
+Iteration   4: 25861.170 ops/ms
+Iteration   5: 25698.509 ops/ms
+Iteration   6: 26198.644 ops/ms
+Iteration   7: 25623.793 ops/ms
+Iteration   8: 25971.779 ops/ms
+Iteration   9: 25590.801 ops/ms
+Iteration  10: 25950.262 ops/ms
+Iteration  11: 25525.052 ops/ms
+Iteration  12: 25758.191 ops/ms
+Iteration  13: 25871.915 ops/ms
+Iteration  14: 25538.225 ops/ms
+Iteration  15: 25907.821 ops/ms
+Iteration  16: 23224.196 ops/ms
+Iteration  17: 22216.663 ops/ms
+Iteration  18: 21944.904 ops/ms
+Iteration  19: 22199.310 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+21790.111 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_existing":
+  25012.790 ±(99.9%) 842.851 ops/ms [Average]
+  (min, avg, max) = (21790.111, 25012.790, 26263.639), stdev = 1498.167
+  CI (99.9%): [24169.940, 25855.641] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_existing
+# Parameters: (repositorySupplier = TREE_SET, size = 1000)
+
+# Run progress: 73.33% complete, ETA 00:08:08
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+25739.642 ops/ms
+# Warmup Iteration   2: 27618.796 ops/ms
+# Warmup Iteration   3: 27736.352 ops/ms
+# Warmup Iteration   4: 27544.420 ops/ms
+# Warmup Iteration   5: 27421.455 ops/ms
+# Warmup Iteration   6: 26934.708 ops/ms
+# Warmup Iteration   7: 25735.233 ops/ms
+# Warmup Iteration   8: 24582.697 ops/ms
+# Warmup Iteration   9: 24997.765 ops/ms
+# Warmup Iteration  10: 25559.986 ops/ms
+Iteration   1: 28490.965 ops/ms
+Iteration   2: 28567.393 ops/ms
+Iteration   3: 28528.940 ops/ms
+Iteration   4: 27804.541 ops/ms
+Iteration   5: 26359.707 ops/ms
+Iteration   6: 25447.409 ops/ms
+Iteration   7: 25128.644 ops/ms
+Iteration   8: 25697.050 ops/ms
+Iteration   9: 28001.234 ops/ms
+Iteration  10: 28436.369 ops/ms
+Iteration  11: 28408.967 ops/ms
+Iteration  12: 28025.642 ops/ms
+Iteration  13: 26708.924 ops/ms
+Iteration  14: 25108.153 ops/ms
+Iteration  15: 25449.916 ops/ms
+Iteration  16: 25599.028 ops/ms
+Iteration  17: 28101.158 ops/ms
+Iteration  18: 28577.078 ops/ms
+Iteration  19: 28571.712 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+28445.767 ops/ms
+
+# Run progress: 75.00% complete, ETA 00:07:37
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+22968.962 ops/ms
+# Warmup Iteration   2: 24700.131 ops/ms
+# Warmup Iteration   3: 22645.344 ops/ms
+# Warmup Iteration   4: 26564.560 ops/ms
+# Warmup Iteration   5: 28134.946 ops/ms
+# Warmup Iteration   6: 27888.709 ops/ms
+# Warmup Iteration   7: 27952.378 ops/ms
+# Warmup Iteration   8: 28037.434 ops/ms
+# Warmup Iteration   9: 27920.384 ops/ms
+# Warmup Iteration  10: 27812.404 ops/ms
+Iteration   1: 27975.136 ops/ms
+Iteration   2: 27979.344 ops/ms
+Iteration   3: 28031.636 ops/ms
+Iteration   4: 27769.476 ops/ms
+Iteration   5: 27921.446 ops/ms
+Iteration   6: 27989.725 ops/ms
+Iteration   7: 27608.564 ops/ms
+Iteration   8: 27941.020 ops/ms
+Iteration   9: 27943.082 ops/ms
+Iteration  10: 27944.270 ops/ms
+Iteration  11: 28008.180 ops/ms
+Iteration  12: 27993.736 ops/ms
+Iteration  13: 27919.179 ops/ms
+Iteration  14: 27897.298 ops/ms
+Iteration  15: 28004.762 ops/ms
+Iteration  16: 27974.380 ops/ms
+Iteration  17: 27991.185 ops/ms
+Iteration  18: 27952.583 ops/ms
+Iteration  19: 27870.848 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+28181.192 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_existing":
+  27608.891 ±(99.9%) 579.188 ops/ms [Average]
+  (min, avg, max) = (25108.153, 27608.891, 28577.078), stdev = 1029.507
+  CI (99.9%): [27029.703, 28188.079] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_existing
+# Parameters: (repositorySupplier = TREE_SET, size = 10000)
+
+# Run progress: 76.67% complete, ETA 00:07:07
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+25294.078 ops/ms
+# Warmup Iteration   2: 27618.895 ops/ms
+# Warmup Iteration   3: 25065.011 ops/ms
+# Warmup Iteration   4: 27174.563 ops/ms
+# Warmup Iteration   5: 27792.173 ops/ms
+# Warmup Iteration   6: 27732.816 ops/ms
+# Warmup Iteration   7: 27795.854 ops/ms
+# Warmup Iteration   8: 27889.532 ops/ms
+# Warmup Iteration   9: 27508.848 ops/ms
+# Warmup Iteration  10: 27720.764 ops/ms
+Iteration   1: 27362.308 ops/ms
+Iteration   2: 27778.353 ops/ms
+Iteration   3: 27699.553 ops/ms
+Iteration   4: 27685.456 ops/ms
+Iteration   5: 27813.492 ops/ms
+Iteration   6: 27395.631 ops/ms
+Iteration   7: 27797.171 ops/ms
+Iteration   8: 27607.912 ops/ms
+Iteration   9: 27772.531 ops/ms
+Iteration  10: 27814.587 ops/ms
+Iteration  11: 27414.980 ops/ms
+Iteration  12: 27712.870 ops/ms
+Iteration  13: 27780.516 ops/ms
+Iteration  14: 27712.607 ops/ms
+Iteration  15: 27616.802 ops/ms
+Iteration  16: 27268.892 ops/ms
+Iteration  17: 27596.261 ops/ms
+Iteration  18: 27617.820 ops/ms
+Iteration  19: 27231.551 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+27532.224 ops/ms
+
+# Run progress: 78.33% complete, ETA 00:06:36
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+23874.012 ops/ms
+# Warmup Iteration   2: 24645.116 ops/ms
+# Warmup Iteration   3: 24895.167 ops/ms
+# Warmup Iteration   4: 27474.466 ops/ms
+# Warmup Iteration   5: 27878.487 ops/ms
+# Warmup Iteration   6: 27341.166 ops/ms
+# Warmup Iteration   7: 27930.072 ops/ms
+# Warmup Iteration   8: 27844.682 ops/ms
+# Warmup Iteration   9: 27635.819 ops/ms
+# Warmup Iteration  10: 27710.916 ops/ms
+Iteration   1: 27174.591 ops/ms
+Iteration   2: 27923.712 ops/ms
+Iteration   3: 27336.457 ops/ms
+Iteration   4: 27220.363 ops/ms
+Iteration   5: 27747.025 ops/ms
+Iteration   6: 27994.891 ops/ms
+Iteration   7: 27789.906 ops/ms
+Iteration   8: 27947.838 ops/ms
+Iteration   9: 27212.201 ops/ms
+Iteration  10: 27817.277 ops/ms
+Iteration  11: 27849.912 ops/ms
+Iteration  12: 27146.892 ops/ms
+Iteration  13: 27556.936 ops/ms
+Iteration  14: 27797.056 ops/ms
+Iteration  15: 27750.065 ops/ms
+Iteration  16: 27700.936 ops/ms
+Iteration  17: 27622.268 ops/ms
+Iteration  18: 27717.814 ops/ms
+Iteration  19: 27480.128 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+26100.415 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_existing":
+  27577.455 ±(99.9%) 186.379 ops/ms [Average]
+  (min, avg, max) = (26100.415, 27577.455, 27994.891), stdev = 331.288
+  CI (99.9%): [27391.076, 27763.834] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_existing
+# Parameters: (repositorySupplier = ARRAY_LIST, size = 1000)
+
+# Run progress: 80.00% complete, ETA 00:06:05
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+18987.740 ops/ms
+# Warmup Iteration   2: 27679.339 ops/ms
+# Warmup Iteration   3: 30161.029 ops/ms
+# Warmup Iteration   4: 29784.645 ops/ms
+# Warmup Iteration   5: 28639.479 ops/ms
+# Warmup Iteration   6: 27041.865 ops/ms
+# Warmup Iteration   7: 23345.430 ops/ms
+# Warmup Iteration   8: 23397.302 ops/ms
+# Warmup Iteration   9: 24795.986 ops/ms
+# Warmup Iteration  10: 25695.507 ops/ms
+Iteration   1: 25817.804 ops/ms
+Iteration   2: 25884.037 ops/ms
+Iteration   3: 25099.273 ops/ms
+Iteration   4: 23479.605 ops/ms
+Iteration   5: 23160.302 ops/ms
+Iteration   6: 21769.483 ops/ms
+Iteration   7: 23554.394 ops/ms
+Iteration   8: 24169.372 ops/ms
+Iteration   9: 23932.233 ops/ms
+Iteration  10: 23846.012 ops/ms
+Iteration  11: 24232.943 ops/ms
+Iteration  12: 22721.508 ops/ms
+Iteration  13: 22786.014 ops/ms
+Iteration  14: 22914.974 ops/ms
+Iteration  15: 24666.731 ops/ms
+Iteration  16: 25362.888 ops/ms
+Iteration  17: 25179.034 ops/ms
+Iteration  18: 25315.436 ops/ms
+Iteration  19: 23190.790 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+22823.269 ops/ms
+
+# Run progress: 81.67% complete, ETA 00:05:35
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+16152.815 ops/ms
+# Warmup Iteration   2: 20633.741 ops/ms
+# Warmup Iteration   3: 15043.402 ops/ms
+# Warmup Iteration   4: 14975.919 ops/ms
+# Warmup Iteration   5: 15026.473 ops/ms
+# Warmup Iteration   6: 20316.541 ops/ms
+# Warmup Iteration   7: 30033.896 ops/ms
+# Warmup Iteration   8: 29262.738 ops/ms
+# Warmup Iteration   9: 25562.176 ops/ms
+# Warmup Iteration  10: 24695.215 ops/ms
+Iteration   1: 23519.602 ops/ms
+Iteration   2: 23380.712 ops/ms
+Iteration   3: 23397.022 ops/ms
+Iteration   4: 24700.126 ops/ms
+Iteration   5: 25910.957 ops/ms
+Iteration   6: 25826.572 ops/ms
+Iteration   7: 26080.163 ops/ms
+Iteration   8: 25394.287 ops/ms
+Iteration   9: 23477.651 ops/ms
+Iteration  10: 23468.796 ops/ms
+Iteration  11: 23340.129 ops/ms
+Iteration  12: 25051.323 ops/ms
+Iteration  13: 25839.584 ops/ms
+Iteration  14: 26070.900 ops/ms
+Iteration  15: 26141.434 ops/ms
+Iteration  16: 25448.669 ops/ms
+Iteration  17: 23514.727 ops/ms
+Iteration  18: 23523.375 ops/ms
+Iteration  19: 23504.521 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+24679.365 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_existing":
+  24304.400 ±(99.9%) 666.360 ops/ms [Average]
+  (min, avg, max) = (21769.483, 24304.400, 26141.434), stdev = 1184.454
+  CI (99.9%): [23638.040, 24970.760] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_existing
+# Parameters: (repositorySupplier = ARRAY_LIST, size = 10000)
+
+# Run progress: 83.33% complete, ETA 00:05:05
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+7206.927 ops/ms
+# Warmup Iteration   2: 8218.129 ops/ms
+# Warmup Iteration   3: 10173.541 ops/ms
+# Warmup Iteration   4: 14970.950 ops/ms
+# Warmup Iteration   5: 14170.326 ops/ms
+# Warmup Iteration   6: 14626.317 ops/ms
+# Warmup Iteration   7: 14307.113 ops/ms
+# Warmup Iteration   8: 13721.532 ops/ms
+# Warmup Iteration   9: 13681.096 ops/ms
+# Warmup Iteration  10: 13449.501 ops/ms
+Iteration   1: 14463.635 ops/ms
+Iteration   2: 15156.477 ops/ms
+Iteration   3: 16094.751 ops/ms
+Iteration   4: 15101.938 ops/ms
+Iteration   5: 14765.155 ops/ms
+Iteration   6: 13351.355 ops/ms
+Iteration   7: 13581.560 ops/ms
+Iteration   8: 13545.344 ops/ms
+Iteration   9: 14544.271 ops/ms
+Iteration  10: 14820.989 ops/ms
+Iteration  11: 16542.569 ops/ms
+Iteration  12: 14984.844 ops/ms
+Iteration  13: 14755.876 ops/ms
+Iteration  14: 14036.913 ops/ms
+Iteration  15: 14045.133 ops/ms
+Iteration  16: 14243.035 ops/ms
+Iteration  17: 14938.347 ops/ms
+Iteration  18: 15541.172 ops/ms
+Iteration  19: 14691.269 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+14521.266 ops/ms
+
+# Run progress: 85.00% complete, ETA 00:04:34
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+7429.920 ops/ms
+# Warmup Iteration   2: 8188.792 ops/ms
+# Warmup Iteration   3: 10525.541 ops/ms
+# Warmup Iteration   4: 14422.918 ops/ms
+# Warmup Iteration   5: 14245.849 ops/ms
+# Warmup Iteration   6: 16398.147 ops/ms
+# Warmup Iteration   7: 16321.346 ops/ms
+# Warmup Iteration   8: 16387.885 ops/ms
+# Warmup Iteration   9: 15531.337 ops/ms
+# Warmup Iteration  10: 15222.953 ops/ms
+Iteration   1: 15213.020 ops/ms
+Iteration   2: 15439.705 ops/ms
+Iteration   3: 16729.467 ops/ms
+Iteration   4: 16786.550 ops/ms
+Iteration   5: 16672.102 ops/ms
+Iteration   6: 16529.090 ops/ms
+Iteration   7: 15999.840 ops/ms
+Iteration   8: 14823.481 ops/ms
+Iteration   9: 13753.469 ops/ms
+Iteration  10: 13522.097 ops/ms
+Iteration  11: 13176.983 ops/ms
+Iteration  12: 12628.551 ops/ms
+Iteration  13: 12732.461 ops/ms
+Iteration  14: 15465.210 ops/ms
+Iteration  15: 16320.902 ops/ms
+Iteration  16: 16427.686 ops/ms
+Iteration  17: 16769.632 ops/ms
+Iteration  18: 16808.161 ops/ms
+Iteration  19: 16573.744 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+16543.419 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_existing":
+  15066.037 ±(99.9%) 695.668 ops/ms [Average]
+  (min, avg, max) = (12628.551, 15066.037, 16808.161), stdev = 1236.548
+  CI (99.9%): [14370.369, 15761.704] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_existing
+# Parameters: (repositorySupplier = LINKED_LIST, size = 1000)
+
+# Run progress: 86.67% complete, ETA 00:04:04
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+16739.005 ops/ms
+# Warmup Iteration   2: 25988.778 ops/ms
+# Warmup Iteration   3: 30328.964 ops/ms
+# Warmup Iteration   4: 29846.792 ops/ms
+# Warmup Iteration   5: 28838.806 ops/ms
+# Warmup Iteration   6: 29521.588 ops/ms
+# Warmup Iteration   7: 27944.247 ops/ms
+# Warmup Iteration   8: 27919.881 ops/ms
+# Warmup Iteration   9: 27128.356 ops/ms
+# Warmup Iteration  10: 28088.329 ops/ms
+Iteration   1: 27370.270 ops/ms
+Iteration   2: 27315.630 ops/ms
+Iteration   3: 25231.009 ops/ms
+Iteration   4: 24916.623 ops/ms
+Iteration   5: 24837.258 ops/ms
+Iteration   6: 24992.896 ops/ms
+Iteration   7: 24960.100 ops/ms
+Iteration   8: 25622.854 ops/ms
+Iteration   9: 25009.492 ops/ms
+Iteration  10: 24937.594 ops/ms
+Iteration  11: 24909.685 ops/ms
+Iteration  12: 25382.417 ops/ms
+Iteration  13: 25631.465 ops/ms
+Iteration  14: 25606.377 ops/ms
+Iteration  15: 25928.617 ops/ms
+Iteration  16: 25714.732 ops/ms
+Iteration  17: 25465.744 ops/ms
+Iteration  18: 25220.529 ops/ms
+Iteration  19: 25761.215 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+25357.801 ops/ms
+
+# Run progress: 88.33% complete, ETA 00:03:33
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+15791.350 ops/ms
+# Warmup Iteration   2: 25259.122 ops/ms
+# Warmup Iteration   3: 29936.407 ops/ms
+# Warmup Iteration   4: 28203.724 ops/ms
+# Warmup Iteration   5: 27317.171 ops/ms
+# Warmup Iteration   6: 26982.269 ops/ms
+# Warmup Iteration   7: 25788.252 ops/ms
+# Warmup Iteration   8: 27702.919 ops/ms
+# Warmup Iteration   9: 27938.143 ops/ms
+# Warmup Iteration  10: 28318.457 ops/ms
+Iteration   1: 28079.698 ops/ms
+Iteration   2: 26147.398 ops/ms
+Iteration   3: 25618.877 ops/ms
+Iteration   4: 25221.707 ops/ms
+Iteration   5: 25940.536 ops/ms
+Iteration   6: 28149.707 ops/ms
+Iteration   7: 28245.821 ops/ms
+Iteration   8: 28132.767 ops/ms
+Iteration   9: 28453.313 ops/ms
+Iteration  10: 26161.457 ops/ms
+Iteration  11: 25500.685 ops/ms
+Iteration  12: 25622.530 ops/ms
+Iteration  13: 26012.306 ops/ms
+Iteration  14: 27613.720 ops/ms
+Iteration  15: 28305.342 ops/ms
+Iteration  16: 28329.245 ops/ms
+Iteration  17: 28154.902 ops/ms
+Iteration  18: 25843.812 ops/ms
+Iteration  19: 25554.182 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+25585.413 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_existing":
+  26171.143 ±(99.9%) 682.197 ops/ms [Average]
+  (min, avg, max) = (24837.258, 26171.143, 28453.313), stdev = 1212.605
+  CI (99.9%): [25488.946, 26853.340] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_existing
+# Parameters: (repositorySupplier = LINKED_LIST, size = 10000)
+
+# Run progress: 90.00% complete, ETA 00:03:03
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+6416.102 ops/ms
+# Warmup Iteration   2: 7540.397 ops/ms
+# Warmup Iteration   3: 7537.882 ops/ms
+# Warmup Iteration   4: 12503.325 ops/ms
+# Warmup Iteration   5: 12223.743 ops/ms
+# Warmup Iteration   6: 11671.925 ops/ms
+# Warmup Iteration   7: 13128.180 ops/ms
+# Warmup Iteration   8: 12863.323 ops/ms
+# Warmup Iteration   9: 13120.582 ops/ms
+# Warmup Iteration  10: 12720.274 ops/ms
+Iteration   1: 13122.675 ops/ms
+Iteration   2: 12362.989 ops/ms
+Iteration   3: 13016.020 ops/ms
+Iteration   4: 12436.452 ops/ms
+Iteration   5: 13439.655 ops/ms
+Iteration   6: 12854.939 ops/ms
+Iteration   7: 11769.114 ops/ms
+Iteration   8: 11235.371 ops/ms
+Iteration   9: 11479.131 ops/ms
+Iteration  10: 11320.018 ops/ms
+Iteration  11: 12894.657 ops/ms
+Iteration  12: 12732.370 ops/ms
+Iteration  13: 12405.839 ops/ms
+Iteration  14: 12346.608 ops/ms
+Iteration  15: 12472.732 ops/ms
+Iteration  16: 12903.644 ops/ms
+Iteration  17: 12645.654 ops/ms
+Iteration  18: 12189.603 ops/ms
+Iteration  19: 13052.615 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+12738.755 ops/ms
+
+# Run progress: 91.67% complete, ETA 00:02:32
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+6683.380 ops/ms
+# Warmup Iteration   2: 7455.536 ops/ms
+# Warmup Iteration   3: 7740.138 ops/ms
+# Warmup Iteration   4: 12936.824 ops/ms
+# Warmup Iteration   5: 13130.487 ops/ms
+# Warmup Iteration   6: 14560.452 ops/ms
+# Warmup Iteration   7: 14707.910 ops/ms
+# Warmup Iteration   8: 15002.883 ops/ms
+# Warmup Iteration   9: 14680.009 ops/ms
+# Warmup Iteration  10: 15844.254 ops/ms
+Iteration   1: 15991.428 ops/ms
+Iteration   2: 15670.602 ops/ms
+Iteration   3: 16317.421 ops/ms
+Iteration   4: 15446.505 ops/ms
+Iteration   5: 16267.366 ops/ms
+Iteration   6: 15517.773 ops/ms
+Iteration   7: 16216.695 ops/ms
+Iteration   8: 15107.501 ops/ms
+Iteration   9: 16240.781 ops/ms
+Iteration  10: 15629.032 ops/ms
+Iteration  11: 15881.589 ops/ms
+Iteration  12: 14609.021 ops/ms
+Iteration  13: 14406.296 ops/ms
+Iteration  14: 14880.596 ops/ms
+Iteration  15: 14896.584 ops/ms
+Iteration  16: 15810.626 ops/ms
+Iteration  17: 16576.764 ops/ms
+Iteration  18: 16281.914 ops/ms
+Iteration  19: 15506.047 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+14109.633 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_existing":
+  14019.575 ±(99.9%) 955.118 ops/ms [Average]
+  (min, avg, max) = (11235.371, 14019.575, 16576.764), stdev = 1697.721
+  CI (99.9%): [13064.458, 14974.693] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_existing
+# Parameters: (repositorySupplier = CONCURRENT_HASH_MAP, size = 1000)
+
+# Run progress: 93.33% complete, ETA 00:02:02
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+16502.057 ops/ms
+# Warmup Iteration   2: 16772.661 ops/ms
+# Warmup Iteration   3: 16821.786 ops/ms
+# Warmup Iteration   4: 17518.592 ops/ms
+# Warmup Iteration   5: 17826.675 ops/ms
+# Warmup Iteration   6: 17885.588 ops/ms
+# Warmup Iteration   7: 17880.271 ops/ms
+# Warmup Iteration   8: 17807.260 ops/ms
+# Warmup Iteration   9: 17557.916 ops/ms
+# Warmup Iteration  10: 17988.059 ops/ms
+Iteration   1: 17772.101 ops/ms
+Iteration   2: 17992.894 ops/ms
+Iteration   3: 17942.914 ops/ms
+Iteration   4: 17438.895 ops/ms
+Iteration   5: 17791.784 ops/ms
+Iteration   6: 17698.031 ops/ms
+Iteration   7: 18024.783 ops/ms
+Iteration   8: 17955.200 ops/ms
+Iteration   9: 17687.556 ops/ms
+Iteration  10: 18007.483 ops/ms
+Iteration  11: 17906.289 ops/ms
+Iteration  12: 17944.592 ops/ms
+Iteration  13: 17968.846 ops/ms
+Iteration  14: 17968.578 ops/ms
+Iteration  15: 17970.656 ops/ms
+Iteration  16: 17750.532 ops/ms
+Iteration  17: 17767.145 ops/ms
+Iteration  18: 17886.183 ops/ms
+Iteration  19: 17976.001 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+18048.640 ops/ms
+
+# Run progress: 95.00% complete, ETA 00:01:31
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+16499.926 ops/ms
+# Warmup Iteration   2: 16778.861 ops/ms
+# Warmup Iteration   3: 17003.274 ops/ms
+# Warmup Iteration   4: 17240.733 ops/ms
+# Warmup Iteration   5: 17496.206 ops/ms
+# Warmup Iteration   6: 17297.974 ops/ms
+# Warmup Iteration   7: 18061.635 ops/ms
+# Warmup Iteration   8: 18046.525 ops/ms
+# Warmup Iteration   9: 18046.525 ops/ms
+# Warmup Iteration  10: 17649.253 ops/ms
+Iteration   1: 17845.438 ops/ms
+Iteration   2: 18004.782 ops/ms
+Iteration   3: 18010.254 ops/ms
+Iteration   4: 17741.921 ops/ms
+Iteration   5: 18027.681 ops/ms
+Iteration   6: 17949.045 ops/ms
+Iteration   7: 18087.291 ops/ms
+Iteration   8: 18131.973 ops/ms
+Iteration   9: 17710.134 ops/ms
+Iteration  10: 18053.952 ops/ms
+Iteration  11: 17792.950 ops/ms
+Iteration  12: 17698.062 ops/ms
+Iteration  13: 17591.758 ops/ms
+Iteration  14: 17501.243 ops/ms
+Iteration  15: 17802.222 ops/ms
+Iteration  16: 18077.228 ops/ms
+Iteration  17: 17568.600 ops/ms
+Iteration  18: 17751.604 ops/ms
+Iteration  19: 17772.936 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+18077.278 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_existing":
+  17867.386 ±(99.9%) 96.788 ops/ms [Average]
+  (min, avg, max) = (17438.895, 17867.386, 18131.973), stdev = 172.040
+  CI (99.9%): [17770.598, 17964.174] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms3048m -Xmx3048m -XX:+UseG1GC
+# Warmup: 10 iterations, 1 s each
+# Measurement: 20 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.TestAdd.add_existing
+# Parameters: (repositorySupplier = CONCURRENT_HASH_MAP, size = 10000)
+
+# Run progress: 96.67% complete, ETA 00:01:01
+# Fork: 1 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+16520.755 ops/ms
+# Warmup Iteration   2: 16601.853 ops/ms
+# Warmup Iteration   3: 17307.692 ops/ms
+# Warmup Iteration   4: 18170.154 ops/ms
+# Warmup Iteration   5: 18238.052 ops/ms
+# Warmup Iteration   6: 18174.758 ops/ms
+# Warmup Iteration   7: 18202.335 ops/ms
+# Warmup Iteration   8: 18176.762 ops/ms
+# Warmup Iteration   9: 18045.619 ops/ms
+# Warmup Iteration  10: 18180.604 ops/ms
+Iteration   1: 17727.439 ops/ms
+Iteration   2: 17817.834 ops/ms
+Iteration   3: 17620.009 ops/ms
+Iteration   4: 18246.620 ops/ms
+Iteration   5: 18131.712 ops/ms
+Iteration   6: 18211.483 ops/ms
+Iteration   7: 18171.336 ops/ms
+Iteration   8: 18166.880 ops/ms
+Iteration   9: 18145.715 ops/ms
+Iteration  10: 17879.882 ops/ms
+Iteration  11: 18160.448 ops/ms
+Iteration  12: 18050.195 ops/ms
+Iteration  13: 17961.869 ops/ms
+Iteration  14: 18259.449 ops/ms
+Iteration  15: 18137.450 ops/ms
+Iteration  16: 18056.569 ops/ms
+Iteration  17: 18193.558 ops/ms
+Iteration  18: 18150.464 ops/ms
+Iteration  19: 18226.414 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+18178.503 ops/ms
+
+# Run progress: 98.33% complete, ETA 00:00:30
+# Fork: 2 of 2
+# Warmup Iteration   1: RepoState_jmhType > setup > populate
+16564.779 ops/ms
+# Warmup Iteration   2: 16604.019 ops/ms
+# Warmup Iteration   3: 16522.261 ops/ms
+# Warmup Iteration   4: 17548.285 ops/ms
+# Warmup Iteration   5: 16262.519 ops/ms
+# Warmup Iteration   6: 15730.891 ops/ms
+# Warmup Iteration   7: 15909.441 ops/ms
+# Warmup Iteration   8: 16341.774 ops/ms
+# Warmup Iteration   9: 17796.282 ops/ms
+# Warmup Iteration  10: 17693.762 ops/ms
+Iteration   1: 17748.478 ops/ms
+Iteration   2: 17778.399 ops/ms
+Iteration   3: 16230.254 ops/ms
+Iteration   4: 15927.517 ops/ms
+Iteration   5: 15913.668 ops/ms
+Iteration   6: 16267.738 ops/ms
+Iteration   7: 17680.670 ops/ms
+Iteration   8: 17795.544 ops/ms
+Iteration   9: 17745.603 ops/ms
+Iteration  10: 17806.116 ops/ms
+Iteration  11: 17514.900 ops/ms
+Iteration  12: 17744.602 ops/ms
+Iteration  13: 17717.813 ops/ms
+Iteration  14: 17500.240 ops/ms
+Iteration  15: 17705.624 ops/ms
+Iteration  16: 17704.839 ops/ms
+Iteration  17: 17634.181 ops/ms
+Iteration  18: 17678.466 ops/ms
+Iteration  19: 17356.103 ops/ms
+Iteration  20: RepoState_jmhType > teardown > clear
+17754.873 ops/ms
+
+
+Result "com.tora.benchmarks.TestAdd.add_existing":
+  17717.486 ±(99.9%) 339.378 ops/ms [Average]
+  (min, avg, max) = (15913.668, 17717.486, 18259.449), stdev = 603.243
+  CI (99.9%): [17378.109, 18056.864] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:30:31
+
+Benchmark             (repositorySupplier)  (size)   Mode  Cnt      Score      Error   Units
+TestAdd.add_after                 HASH_SET    1000  thrpt   40  25868.630 ±  899.493  ops/ms
+TestAdd.add_after                 HASH_SET   10000  thrpt   40  25001.533 ± 1056.669  ops/ms
+TestAdd.add_after                 TREE_SET    1000  thrpt   40  31953.157 ±  811.102  ops/ms
+TestAdd.add_after                 TREE_SET   10000  thrpt   40  32819.287 ± 1044.734  ops/ms
+TestAdd.add_after               ARRAY_LIST    1000  thrpt   40  22776.196 ±  756.810  ops/ms
+TestAdd.add_after               ARRAY_LIST   10000  thrpt   40  12630.742 ±  222.210  ops/ms
+TestAdd.add_after              LINKED_LIST    1000  thrpt   40  20360.661 ±  662.403  ops/ms
+TestAdd.add_after              LINKED_LIST   10000  thrpt   40  12466.478 ±  318.694  ops/ms
+TestAdd.add_after      CONCURRENT_HASH_MAP    1000  thrpt   40  17593.925 ±  443.814  ops/ms
+TestAdd.add_after      CONCURRENT_HASH_MAP   10000  thrpt   40  18021.844 ±  284.464  ops/ms
+TestAdd.add_before                HASH_SET    1000  thrpt   40  24358.220 ±  913.731  ops/ms
+TestAdd.add_before                HASH_SET   10000  thrpt   40  24374.831 ±  773.508  ops/ms
+TestAdd.add_before                TREE_SET    1000  thrpt   40  19856.002 ±  142.135  ops/ms
+TestAdd.add_before                TREE_SET   10000  thrpt   40  17427.087 ±  376.919  ops/ms
+TestAdd.add_before              ARRAY_LIST    1000  thrpt   40  22196.577 ±  664.922  ops/ms
+TestAdd.add_before              ARRAY_LIST   10000  thrpt   40  13399.749 ±  764.230  ops/ms
+TestAdd.add_before             LINKED_LIST    1000  thrpt   40  18373.517 ±  760.564  ops/ms
+TestAdd.add_before             LINKED_LIST   10000  thrpt   40   9257.509 ±  286.646  ops/ms
+TestAdd.add_before     CONCURRENT_HASH_MAP    1000  thrpt   40  14959.494 ±  152.855  ops/ms
+TestAdd.add_before     CONCURRENT_HASH_MAP   10000  thrpt   40  14176.780 ±  131.165  ops/ms
+TestAdd.add_existing              HASH_SET    1000  thrpt   40  25172.944 ±  833.812  ops/ms
+TestAdd.add_existing              HASH_SET   10000  thrpt   40  25012.790 ±  842.851  ops/ms
+TestAdd.add_existing              TREE_SET    1000  thrpt   40  27608.891 ±  579.188  ops/ms
+TestAdd.add_existing              TREE_SET   10000  thrpt   40  27577.455 ±  186.379  ops/ms
+TestAdd.add_existing            ARRAY_LIST    1000  thrpt   40  24304.400 ±  666.360  ops/ms
+TestAdd.add_existing            ARRAY_LIST   10000  thrpt   40  15066.037 ±  695.668  ops/ms
+TestAdd.add_existing           LINKED_LIST    1000  thrpt   40  26171.143 ±  682.197  ops/ms
+TestAdd.add_existing           LINKED_LIST   10000  thrpt   40  14019.575 ±  955.118  ops/ms
+TestAdd.add_existing   CONCURRENT_HASH_MAP    1000  thrpt   40  17867.386 ±   96.788  ops/ms
+TestAdd.add_existing   CONCURRENT_HASH_MAP   10000  thrpt   40  17717.486 ±  339.378  ops/ms
