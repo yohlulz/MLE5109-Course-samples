@@ -88,6 +88,15 @@
         <module>course2</module>
 	<module>course3</module>
 	<module>course4</module>
+	<module>course5</module>
+	<module>course6</module>
+	<module>course7</module>
+	<module>course8</module>
+	<module>course9</module>
+	<module>course10</module>
+	<module>course11</module>
+	<module>course12</module>
+	<module>course13</module>
     </modules>
 
     <profiles>
