@@ -3,5 +3,6 @@ bin/*
 .classpath
 .project
 .hgignore
+.iml
 .checkstyle
 .settings/*
