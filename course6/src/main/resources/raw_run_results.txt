@@ -1,0 +1,38 @@
+/usr/lib/jvm/java-8-oracle/bin/java -XX:+UnlockCommercialFeatures -javaagent:/opt/ovidiu/work/IDEs/idea-IU-172.3757.52/lib/idea_rt.jar=46792:/opt/ovidiu/work/IDEs/idea-IU-172.3757.52/bin -Dfile.encoding=UTF-8 -classpath /usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/deploy.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/cldrdata.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/dnsns.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/jaccess.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/jfxrt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/localedata.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/nashorn.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/sunec.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/sunjce_provider.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/sunpkcs11.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/zipfs.jar:/usr/lib/jvm/java-8-oracle/jre/lib/javaws.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfxswt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/management-agent.jar:/usr/lib/jvm/java-8-oracle/jre/lib/plugin.jar:/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/opt/ovidiu/work/UBB/MLE5109-Course-samples/course6/target/classes:/home/ovidiu/.m2/repository/org/openjdk/jmh/jmh-core/1.19/jmh-core-1.19.jar:/home/ovidiu/.m2/repository/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar:/home/ovidiu/.m2/repository/org/apache/commons/commons-math3/3.1.1/commons-math3-3.1.1.jar:/home/ovidiu/.m2/repository/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar:/home/ovidiu/.m2/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar:/home/ovidiu/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/home/ovidiu/.m2/repository/com/google/guava/guava/14.0.1/guava-14.0.1.jar:/home/ovidiu/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar com.tora.LinesReaderTest
+
+BUFFERED_IO, /tmp/1M, duration PT0.055S
+BUFFERED_IO, /tmp/10M, duration PT0.131S
+BUFFERED_IO, /tmp/100M, duration PT0.428S
+BUFFERED_IO, /tmp/200M, duration PT0.708S
+BUFFERED_IO, /tmp/1G, duration PT2.768S
+===========================
+STREAM_NIO, /tmp/1M, duration PT0.016S
+STREAM_NIO, /tmp/10M, duration PT0.058S
+STREAM_NIO, /tmp/100M, duration PT0.316S
+STREAM_NIO, /tmp/200M, duration PT0.623S
+STREAM_NIO, /tmp/1G, duration PT2.683S
+===========================
+NIO_ASYNC_CHANNEL, /tmp/1M, duration PT0.083S
+NIO_ASYNC_CHANNEL, /tmp/10M, duration PT0.117S
+NIO_ASYNC_CHANNEL, /tmp/100M, duration PT0.524S
+NIO_ASYNC_CHANNEL, /tmp/200M, duration PT0.894S
+NIO_ASYNC_CHANNEL, /tmp/1G, duration PT3.256S
+===========================
+BUFFERED_IO_50_THREADS, /tmp/1M, duration PT2.159S
+BUFFERED_IO_50_THREADS, /tmp/10M, duration PT4.345S
+BUFFERED_IO_50_THREADS, /tmp/100M, duration PT15.728S
+BUFFERED_IO_50_THREADS, /tmp/200M, duration PT20.201S
+BUFFERED_IO_50_THREADS, /tmp/1G, duration PT52.437S
+===========================
+STREAM_NIO_50_THREADS, /tmp/1M, duration PT1.63S
+STREAM_NIO_50_THREADS, /tmp/10M, duration PT5.528S
+STREAM_NIO_50_THREADS, /tmp/100M, duration PT21.124S
+STREAM_NIO_50_THREADS, /tmp/200M, duration PT29.758S
+STREAM_NIO_50_THREADS, /tmp/1G, duration PT1M2.12S
+===========================
+UNBUFFERED_IO, /tmp/1M, duration PT0.171S
+UNBUFFERED_IO, /tmp/10M, duration PT0.782S
+UNBUFFERED_IO, /tmp/100M, duration PT7.227S
+UNBUFFERED_IO, /tmp/200M, duration PT13.797S
+UNBUFFERED_IO, /tmp/1G, duration PT58.456S
+===========================
