@@ -1,0 +1,258 @@
+# JMH version: 1.19
+# VM version: JDK 1.8.0_151, VM 25.151-b12
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms6G -Xmx6G -XX:+UseG1GC
+# Warmup: 15 iterations, 1 s each
+# Measurement: 15 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.StringSplit.split
+
+# Run progress: 0.00% complete, ETA 00:03:00
+# Fork: 1 of 2
+# Warmup Iteration   1: 253522.145 ops/s
+# Warmup Iteration   2: 270162.829 ops/s
+# Warmup Iteration   3: 294063.335 ops/s
+# Warmup Iteration   4: 279810.748 ops/s
+# Warmup Iteration   5: 280214.392 ops/s
+# Warmup Iteration   6: 279313.787 ops/s
+# Warmup Iteration   7: 306105.611 ops/s
+# Warmup Iteration   8: 309785.323 ops/s
+# Warmup Iteration   9: 311589.392 ops/s
+# Warmup Iteration  10: 314071.554 ops/s
+# Warmup Iteration  11: 293801.433 ops/s
+# Warmup Iteration  12: 282131.059 ops/s
+# Warmup Iteration  13: 280286.136 ops/s
+# Warmup Iteration  14: 280135.929 ops/s
+# Warmup Iteration  15: 303649.467 ops/s
+Iteration   1: 314913.009 ops/s
+Iteration   2: 312558.801 ops/s
+Iteration   3: 313710.949 ops/s
+Iteration   4: 294300.662 ops/s
+Iteration   5: 281362.432 ops/s
+Iteration   6: 282577.872 ops/s
+Iteration   7: 280790.571 ops/s
+Iteration   8: 305654.430 ops/s
+Iteration   9: 313979.272 ops/s
+Iteration  10: 313744.975 ops/s
+Iteration  11: 312682.498 ops/s
+Iteration  12: 289064.261 ops/s
+Iteration  13: 281285.234 ops/s
+Iteration  14: 282493.018 ops/s
+Iteration  15: 281587.417 ops/s
+
+# Run progress: 16.67% complete, ETA 00:02:31
+# Fork: 2 of 2
+# Warmup Iteration   1: 262854.290 ops/s
+# Warmup Iteration   2: 273154.954 ops/s
+# Warmup Iteration   3: 311088.562 ops/s
+# Warmup Iteration   4: 314050.566 ops/s
+# Warmup Iteration   5: 310047.869 ops/s
+# Warmup Iteration   6: 313123.515 ops/s
+# Warmup Iteration   7: 310834.088 ops/s
+# Warmup Iteration   8: 309061.202 ops/s
+# Warmup Iteration   9: 311722.000 ops/s
+# Warmup Iteration  10: 300740.111 ops/s
+# Warmup Iteration  11: 307375.954 ops/s
+# Warmup Iteration  12: 311482.915 ops/s
+# Warmup Iteration  13: 280952.095 ops/s
+# Warmup Iteration  14: 280492.731 ops/s
+# Warmup Iteration  15: 278321.191 ops/s
+Iteration   1: 278205.939 ops/s
+Iteration   2: 312906.991 ops/s
+Iteration   3: 312536.904 ops/s
+Iteration   4: 309183.443 ops/s
+Iteration   5: 306766.681 ops/s
+Iteration   6: 283546.078 ops/s
+Iteration   7: 281501.874 ops/s
+Iteration   8: 279671.729 ops/s
+Iteration   9: 279149.969 ops/s
+Iteration  10: 308482.424 ops/s
+Iteration  11: 311591.886 ops/s
+Iteration  12: 311187.152 ops/s
+Iteration  13: 311636.025 ops/s
+Iteration  14: 284309.258 ops/s
+Iteration  15: 278897.657 ops/s
+
+
+Result "com.tora.benchmarks.StringSplit.split":
+  297009.314 ±(99.9%) 10073.623 ops/s [Average]
+  (min, avg, max) = (278205.939, 297009.314, 314913.009), stdev = 15077.727
+  CI (99.9%): [286935.690, 307082.937] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_151, VM 25.151-b12
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms6G -Xmx6G -XX:+UseG1GC
+# Warmup: 15 iterations, 1 s each
+# Measurement: 15 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.StringSplit.splitMultiple
+
+# Run progress: 33.33% complete, ETA 00:02:01
+# Fork: 1 of 2
+# Warmup Iteration   1: 101839.109 ops/s
+# Warmup Iteration   2: 117696.386 ops/s
+# Warmup Iteration   3: 126956.277 ops/s
+# Warmup Iteration   4: 123794.470 ops/s
+# Warmup Iteration   5: 136386.102 ops/s
+# Warmup Iteration   6: 136744.804 ops/s
+# Warmup Iteration   7: 122100.339 ops/s
+# Warmup Iteration   8: 123693.477 ops/s
+# Warmup Iteration   9: 122960.407 ops/s
+# Warmup Iteration  10: 124818.671 ops/s
+# Warmup Iteration  11: 137065.167 ops/s
+# Warmup Iteration  12: 137385.654 ops/s
+# Warmup Iteration  13: 136741.252 ops/s
+# Warmup Iteration  14: 136549.876 ops/s
+# Warmup Iteration  15: 122666.226 ops/s
+Iteration   1: 123487.168 ops/s
+Iteration   2: 121558.016 ops/s
+Iteration   3: 123695.376 ops/s
+Iteration   4: 135484.407 ops/s
+Iteration   5: 135493.424 ops/s
+Iteration   6: 134056.528 ops/s
+Iteration   7: 132836.089 ops/s
+Iteration   8: 121251.448 ops/s
+Iteration   9: 120313.331 ops/s
+Iteration  10: 121010.256 ops/s
+Iteration  11: 124282.593 ops/s
+Iteration  12: 134343.084 ops/s
+Iteration  13: 135162.834 ops/s
+Iteration  14: 134944.601 ops/s
+Iteration  15: 131524.251 ops/s
+
+# Run progress: 50.00% complete, ETA 00:01:30
+# Fork: 2 of 2
+# Warmup Iteration   1: 99776.123 ops/s
+# Warmup Iteration   2: 115026.942 ops/s
+# Warmup Iteration   3: 115033.331 ops/s
+# Warmup Iteration   4: 116351.739 ops/s
+# Warmup Iteration   5: 137795.808 ops/s
+# Warmup Iteration   6: 138055.697 ops/s
+# Warmup Iteration   7: 136112.095 ops/s
+# Warmup Iteration   8: 132603.248 ops/s
+# Warmup Iteration   9: 123203.003 ops/s
+# Warmup Iteration  10: 122765.726 ops/s
+# Warmup Iteration  11: 123209.304 ops/s
+# Warmup Iteration  12: 129195.886 ops/s
+# Warmup Iteration  13: 136532.516 ops/s
+# Warmup Iteration  14: 137558.242 ops/s
+# Warmup Iteration  15: 136459.635 ops/s
+Iteration   1: 132213.610 ops/s
+Iteration   2: 123410.093 ops/s
+Iteration   3: 122224.515 ops/s
+Iteration   4: 123720.893 ops/s
+Iteration   5: 129215.543 ops/s
+Iteration   6: 137104.377 ops/s
+Iteration   7: 138293.210 ops/s
+Iteration   8: 136272.156 ops/s
+Iteration   9: 131552.098 ops/s
+Iteration  10: 123407.107 ops/s
+Iteration  11: 123469.724 ops/s
+Iteration  12: 122750.414 ops/s
+Iteration  13: 129533.669 ops/s
+Iteration  14: 135689.678 ops/s
+Iteration  15: 136661.298 ops/s
+
+
+Result "com.tora.benchmarks.StringSplit.splitMultiple":
+  129165.393 ±(99.9%) 4112.745 ops/s [Average]
+  (min, avg, max) = (120313.331, 129165.393, 138293.210), stdev = 6155.764
+  CI (99.9%): [125052.648, 133278.138] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_151, VM 25.151-b12
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xms6G -Xmx6G -XX:+UseG1GC
+# Warmup: 15 iterations, 1 s each
+# Measurement: 15 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.tora.benchmarks.StringSplit.splitPattern
+
+# Run progress: 66.67% complete, ETA 00:01:00
+# Fork: 1 of 2
+# Warmup Iteration   1: 160786.568 ops/s
+# Warmup Iteration   2: 177680.331 ops/s
+# Warmup Iteration   3: 165846.365 ops/s
+# Warmup Iteration   4: 185333.507 ops/s
+# Warmup Iteration   5: 184243.007 ops/s
+# Warmup Iteration   6: 198708.586 ops/s
+# Warmup Iteration   7: 205009.119 ops/s
+# Warmup Iteration   8: 206513.119 ops/s
+# Warmup Iteration   9: 205049.445 ops/s
+# Warmup Iteration  10: 195439.119 ops/s
+# Warmup Iteration  11: 184535.790 ops/s
+# Warmup Iteration  12: 185824.604 ops/s
+# Warmup Iteration  13: 184561.900 ops/s
+# Warmup Iteration  14: 198265.080 ops/s
+# Warmup Iteration  15: 204203.188 ops/s
+Iteration   1: 206819.825 ops/s
+Iteration   2: 206114.798 ops/s
+Iteration   3: 196300.073 ops/s
+Iteration   4: 184595.729 ops/s
+Iteration   5: 185998.041 ops/s
+Iteration   6: 184892.611 ops/s
+Iteration   7: 197937.345 ops/s
+Iteration   8: 205694.044 ops/s
+Iteration   9: 206524.905 ops/s
+Iteration  10: 206040.726 ops/s
+Iteration  11: 194026.723 ops/s
+Iteration  12: 185763.990 ops/s
+Iteration  13: 185916.206 ops/s
+Iteration  14: 184707.842 ops/s
+Iteration  15: 199209.231 ops/s
+
+# Run progress: 83.33% complete, ETA 00:00:30
+# Fork: 2 of 2
+# Warmup Iteration   1: 173608.640 ops/s
+# Warmup Iteration   2: 189010.867 ops/s
+# Warmup Iteration   3: 190097.906 ops/s
+# Warmup Iteration   4: 207910.589 ops/s
+# Warmup Iteration   5: 207735.843 ops/s
+# Warmup Iteration   6: 209025.243 ops/s
+# Warmup Iteration   7: 201546.119 ops/s
+# Warmup Iteration   8: 186995.191 ops/s
+# Warmup Iteration   9: 185120.777 ops/s
+# Warmup Iteration  10: 186639.083 ops/s
+# Warmup Iteration  11: 185334.171 ops/s
+# Warmup Iteration  12: 204802.422 ops/s
+# Warmup Iteration  13: 204589.885 ops/s
+# Warmup Iteration  14: 205124.039 ops/s
+# Warmup Iteration  15: 206031.511 ops/s
+Iteration   1: 190503.924 ops/s
+Iteration   2: 186017.901 ops/s
+Iteration   3: 186315.447 ops/s
+Iteration   4: 187263.903 ops/s
+Iteration   5: 198874.088 ops/s
+Iteration   6: 200268.081 ops/s
+Iteration   7: 203854.872 ops/s
+Iteration   8: 204319.533 ops/s
+Iteration   9: 188511.588 ops/s
+Iteration  10: 186658.230 ops/s
+Iteration  11: 184914.654 ops/s
+Iteration  12: 186440.240 ops/s
+Iteration  13: 198183.791 ops/s
+Iteration  14: 200545.472 ops/s
+Iteration  15: 203310.794 ops/s
+
+
+Result "com.tora.benchmarks.StringSplit.splitPattern":
+  194550.820 ±(99.9%) 5632.713 ops/s [Average]
+  (min, avg, max) = (184595.729, 194550.820, 206819.825), stdev = 8430.780
+  CI (99.9%): [188918.107, 200183.533] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:03:01
+
+Benchmark                   Mode  Cnt       Score       Error  Units
+StringSplit.split          thrpt   30  297009.314 ± 10073.623  ops/s
+StringSplit.splitMultiple  thrpt   30  129165.393 ±  4112.745  ops/s
+StringSplit.splitPattern   thrpt   30  194550.820 ±  5632.713  ops/s

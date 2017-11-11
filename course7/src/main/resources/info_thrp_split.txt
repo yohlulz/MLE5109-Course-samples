@@ -1,0 +1,8 @@
+$ java -jar target/benchmarks.jar  -f 2 -wi 15 -i 15 -jvmArgs '-Xms6G -Xmx6G -XX:+UseG1GC' StringSplit > thrpt__split.txt
+
+# Run complete. Total time: 00:03:01
+
+Benchmark                   Mode  Cnt       Score       Error  Units
+StringSplit.split          thrpt   30  297009.314 ± 10073.623  ops/s
+StringSplit.splitMultiple  thrpt   30  129165.393 ±  4112.745  ops/s
+StringSplit.splitPattern   thrpt   30  194550.820 ±  5632.713  ops/s

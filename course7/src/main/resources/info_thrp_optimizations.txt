@@ -1,0 +1,14 @@
+$ java -jar target/benchmarks.jar  -f 2 -wi 15 -i 15 -jvmArgs '-Xms6G -Xmx6G -XX:+UseG1GC' > thrpt__optimization.txt
+
+# Run complete. Total time: 00:11:47
+
+Benchmark                    Mode  Cnt       Score      Error  Units
+StringConcat.concat         thrpt   30     227.303 ±    1.129  ops/s
+StringConcat.plus           thrpt   30     197.384 ±    0.380  ops/s
+StringConcat.stringBuffer   thrpt   30  186229.130 ± 2487.583  ops/s
+StringConcat.stringBuilder  thrpt   30  189713.228 ± 3083.425  ops/s
+
+StringValue.post            thrpt   30    5028.672 ±  369.231  ops/s
+StringValue.pre             thrpt   30    4916.622 ±  521.221  ops/s
+StringValue.valueOf         thrpt   30    3324.731 ±  296.636  ops/s
+StringValue.valueToString   thrpt   30    3455.009 ±   82.429  ops/s
