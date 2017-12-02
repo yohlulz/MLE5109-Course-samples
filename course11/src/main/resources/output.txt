@@ -1,0 +1,575 @@
+Java Concurrency Stress Tests
+---------------------------------------------------------------------------------
+Rev: null, built by ovidiu with 1.8.0_151 at null
+
+Probing what VM modes are available:
+ (failures are non-fatal, but may miss some interesting cases)
+
+----- [OK] [-Xint]
+----- [OK] [-XX:TieredStopAtLevel=1]
+----- [OK] []
+----- [N/A] [-XX:+UnlockDiagnosticVMOptions, -XX:+StressLCM, -XX:+StressGCM]
+Error: VM option 'StressLCM' is develop and is available only in debug version of VM.
+Error: Could not create the Java Virtual Machine.
+Error: A fatal exception has occurred. Program will exit.
+
+
+----- [OK] [-XX:-TieredCompilation]
+----- [N/A] [-XX:-TieredCompilation, -XX:+UnlockDiagnosticVMOptions, -XX:+StressLCM, -XX:+StressGCM]
+Error: VM option 'StressLCM' is develop and is available only in debug version of VM.
+Error: Could not create the Java Virtual Machine.
+Error: A fatal exception has occurred. Program will exit.
+
+
+
+Initializing and probing the target VM: 
+ (all failures are non-fatal, but may affect testing accuracy)
+
+----- [OK] Unlocking diagnostic VM options
+Burning up to figure out the exact CPU count....... done!
+
+----- [OK] Trimming down the default VM heap size to 1/8-th of max RAM
+----- [OK] Trimming down the number of compiler threads
+----- [OK] Trimming down the number of parallel GC threads
+----- [OK] Trimming down the number of concurrent GC threads
+----- [OK] Trimming down the number of G1 concurrent refinement GC threads
+----- [OK] Testing @Contended works on all results and infra objects
+----- [OK] Unlocking Whitebox API for online de-optimization
+----- [OK] Testing allocation profiling
+----- [FAILED] Trying Thread.onSpinWait
+Exception in thread "main" java.lang.NoSuchMethodError: java.lang.Thread.onSpinWait()V
+	at org.openjdk.jcstress.vm.ThreadSpinWaitTestMain.main(ThreadSpinWaitTestMain.java:30)
+
+
+  Hardware threads in use/available: 8/8, no yielding.
+  Test preset mode: "default"
+  Writing the test results to "jcstress-results-2017-11-30-21-11-50.bin.gz"
+  Parsing results to "results/"
+  Running each test matching ".*" for 1 forks, 5 iterations, 1000 ms each
+  Each JVM would execute at most 5 tests in the row.
+  Solo stride size will be autobalanced within [10, 10000] elements, but taking no more than 100 Mb.
+
+       [OK] com.tora.benchmarks.JcStressVolatile
+(ETA:   00:00:01) (Rate: 2.21E+06 samples/sec) (Tests: 1 of 4) (Forks:  1 of 16) (Iterations:  1 of 96; 1 passed, 0 failed, 0 soft errs, 0 hard errs)                                                                                                                                                             [OK] com.tora.benchmarks.JcStressVolatile
+(ETA:   00:00:00) (Rate: 3.47E+06 samples/sec) (Tests: 1 of 4) (Forks:  2 of 16) (Iterations:  2 of 96; 2 passed, 0 failed, 0 soft errs, 0 hard errs)                                                                                                                                                             [OK] com.tora.benchmarks.JcStressCAS
+(ETA:   00:00:02) (Rate: 1.41E+06 samples/sec) (Tests: 2 of 4) (Forks:  3 of 16) (Iterations:  3 of 96; 3 passed, 0 failed, 0 soft errs, 0 hard errs)                                                                                                                                                             [OK] com.tora.benchmarks.JcStressNoSync
+(ETA:   00:00:01) (Rate: 1.85E+06 samples/sec) (Tests: 3 of 4) (Forks:  4 of 16) (Iterations:  4 of 96; 4 passed, 0 failed, 0 soft errs, 0 hard errs)                                                                                                                                                             [OK] com.tora.benchmarks.JcStressVolatile
+    (fork: #1, iteration #1, JVM args: [-XX:TieredStopAtLevel=1])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       100,070   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    18,486,680               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:18) (Rate: 1.82E+07 samples/sec) (Tests: 3 of 4) (Forks:  4 of 16) (Iterations:  5 of 96; 5 passed, 0 failed, 0 soft errs, 0 hard errs)                                                                                                                                                             [OK] com.tora.benchmarks.JcStressVolatile
+    (fork: #1, iteration #1, JVM args: [])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       116,394   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    15,018,856               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:15) (Rate: 3.25E+07 samples/sec) (Tests: 3 of 4) (Forks:  4 of 16) (Iterations:  6 of 96; 6 passed, 0 failed, 0 soft errs, 0 hard errs)                                                                                                                                                             [OK] com.tora.benchmarks.JcStressNoSync
+    (fork: #1, iteration #1, JVM args: [-Xint])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1        26,934   ACCEPTABLE_INTERESTING  One update lost                                             
+               2       932,066               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:13) (Rate: 3.18E+07 samples/sec) (Tests: 3 of 4) (Forks:  4 of 16) (Iterations:  7 of 96; 7 passed, 0 failed, 0 soft errs, 0 hard errs)                                                                                                                                                         [FAILED] com.tora.benchmarks.JcStressCAS
+    (fork: #1, iteration #1, JVM args: [-XX:-TieredCompilation])
+  Observed state   Occurrences   Expectation  Interpretation                                              
+           1, 10       961,654    ACCEPTABLE  Actor2 -> Actor1 execution                                  
+           5, 10       325,136     FORBIDDEN  No default case provided, assume FORBIDDEN                  
+            5, 2     4,952,080    ACCEPTABLE  Actor1 -> Actor2 execution                                  
+
+(ETA:   00:00:11) (Rate: 3.73E+07 samples/sec) (Tests: 3 of 4) (Forks:  4 of 16) (Iterations:  8 of 96; 7 passed, 1 failed, 0 soft errs, 0 hard errs)                                                                                                                                                             [OK] com.tora.benchmarks.JcStressVolatile
+    (fork: #1, iteration #2, JVM args: [-XX:TieredStopAtLevel=1])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       108,424   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    19,419,416               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:19) (Rate: 2.98E+07 samples/sec) (Tests: 3 of 4) (Forks:  4 of 16) (Iterations:  9 of 96; 8 passed, 1 failed, 0 soft errs, 0 hard errs)                                                                                                                                                             [OK] com.tora.benchmarks.JcStressVolatile
+    (fork: #1, iteration #2, JVM args: [])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       114,123   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    18,330,607               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:17) (Rate: 3.83E+07 samples/sec) (Tests: 3 of 4) (Forks:  4 of 16) (Iterations: 10 of 96; 9 passed, 1 failed, 0 soft errs, 0 hard errs)                                                                                                                                                         [FAILED] com.tora.benchmarks.JcStressCAS
+    (fork: #1, iteration #2, JVM args: [-XX:-TieredCompilation])
+  Observed state   Occurrences   Expectation  Interpretation                                              
+           1, 10     1,581,000    ACCEPTABLE  Actor2 -> Actor1 execution                                  
+           5, 10       915,142     FORBIDDEN  No default case provided, assume FORBIDDEN                  
+            5, 2     4,211,208    ACCEPTABLE  Actor1 -> Actor2 execution                                  
+
+(ETA:   00:00:16) (Rate: 4.03E+07 samples/sec) (Tests: 3 of 4) (Forks:  4 of 16) (Iterations: 11 of 96; 9 passed, 2 failed, 0 soft errs, 0 hard errs)                                                                                                                                                             [OK] com.tora.benchmarks.JcStressNoSync
+    (fork: #1, iteration #2, JVM args: [-Xint])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1        53,307   ACCEPTABLE_INTERESTING  One update lost                                             
+               2       893,213               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:14) (Rate: 4.07E+07 samples/sec) (Tests: 3 of 4) (Forks:  4 of 16) (Iterations: 12 of 96; 10 passed, 2 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressVolatile
+    (fork: #1, iteration #3, JVM args: [-XX:TieredStopAtLevel=1])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       102,226   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    22,884,584               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:19) (Rate: 3.60E+07 samples/sec) (Tests: 3 of 4) (Forks:  4 of 16) (Iterations: 13 of 96; 11 passed, 2 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressVolatile
+    (fork: #1, iteration #3, JVM args: [])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1        61,795   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    20,042,905               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:17) (Rate: 4.22E+07 samples/sec) (Tests: 3 of 4) (Forks:  4 of 16) (Iterations: 14 of 96; 12 passed, 2 failed, 0 soft errs, 0 hard errs)                                                                                                                                                          [FAILED] com.tora.benchmarks.JcStressCAS
+    (fork: #1, iteration #3, JVM args: [-XX:-TieredCompilation])
+  Observed state   Occurrences   Expectation  Interpretation                                              
+           1, 10     1,209,980    ACCEPTABLE  Actor2 -> Actor1 execution                                  
+           5, 10       781,939     FORBIDDEN  No default case provided, assume FORBIDDEN                  
+            5, 2     5,608,841    ACCEPTABLE  Actor1 -> Actor2 execution                                  
+
+(ETA:   00:00:16) (Rate: 4.37E+07 samples/sec) (Tests: 3 of 4) (Forks:  4 of 16) (Iterations: 15 of 96; 12 passed, 3 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressNoSync
+    (fork: #1, iteration #3, JVM args: [-Xint])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1        40,499   ACCEPTABLE_INTERESTING  One update lost                                             
+               2       965,751               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:15) (Rate: 4.40E+07 samples/sec) (Tests: 3 of 4) (Forks:  4 of 16) (Iterations: 16 of 96; 13 passed, 3 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressVolatile
+    (fork: #1, iteration #4, JVM args: [-XX:TieredStopAtLevel=1])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1        95,993   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    21,705,507               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:18) (Rate: 3.95E+07 samples/sec) (Tests: 3 of 4) (Forks:  4 of 16) (Iterations: 17 of 96; 14 passed, 3 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressVolatile
+    (fork: #1, iteration #4, JVM args: [])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1        60,521   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    28,351,289               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:17) (Rate: 4.60E+07 samples/sec) (Tests: 3 of 4) (Forks:  4 of 16) (Iterations: 18 of 96; 15 passed, 3 failed, 0 soft errs, 0 hard errs)                                                                                                                                                          [FAILED] com.tora.benchmarks.JcStressCAS
+    (fork: #1, iteration #4, JVM args: [-XX:-TieredCompilation])
+  Observed state   Occurrences   Expectation  Interpretation                                              
+           1, 10     3,559,242    ACCEPTABLE  Actor2 -> Actor1 execution                                  
+           5, 10       922,814     FORBIDDEN  No default case provided, assume FORBIDDEN                  
+            5, 2     3,084,704    ACCEPTABLE  Actor1 -> Actor2 execution                                  
+
+(ETA:   00:00:16) (Rate: 4.73E+07 samples/sec) (Tests: 3 of 4) (Forks:  4 of 16) (Iterations: 19 of 96; 15 passed, 4 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressNoSync
+    (fork: #1, iteration #4, JVM args: [-Xint])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1        46,451   ACCEPTABLE_INTERESTING  One update lost                                             
+               2       846,199               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:15) (Rate: 4.74E+07 samples/sec) (Tests: 3 of 4) (Forks:  4 of 16) (Iterations: 20 of 96; 16 passed, 4 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressVolatile
+    (fork: #1, iteration #5, JVM args: [-XX:TieredStopAtLevel=1])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       100,261   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    19,919,449               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:17) (Rate: 4.30E+07 samples/sec) (Tests: 3 of 4) (Forks:  4 of 16) (Iterations: 21 of 96; 17 passed, 4 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressNoSync
+(ETA:   00:00:16) (Rate: 4.27E+07 samples/sec) (Tests: 3 of 4) (Forks:  5 of 16) (Iterations: 22 of 96; 18 passed, 4 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressVolatile
+    (fork: #1, iteration #5, JVM args: [])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1        59,566   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    21,594,454               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:15) (Rate: 4.67E+07 samples/sec) (Tests: 3 of 4) (Forks:  5 of 16) (Iterations: 23 of 96; 19 passed, 4 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressNoSync
+(ETA:   00:00:15) (Rate: 4.65E+07 samples/sec) (Tests: 3 of 4) (Forks:  6 of 16) (Iterations: 24 of 96; 20 passed, 4 failed, 0 soft errs, 0 hard errs)                                                                                                                                                          [FAILED] com.tora.benchmarks.JcStressCAS
+    (fork: #1, iteration #5, JVM args: [-XX:-TieredCompilation])
+  Observed state   Occurrences   Expectation  Interpretation                                              
+           1, 10     1,910,228    ACCEPTABLE  Actor2 -> Actor1 execution                                  
+           5, 10     1,561,894     FORBIDDEN  No default case provided, assume FORBIDDEN                  
+            5, 2     3,882,098    ACCEPTABLE  Actor1 -> Actor2 execution                                  
+
+(ETA:   00:00:14) (Rate: 4.78E+07 samples/sec) (Tests: 3 of 4) (Forks:  6 of 16) (Iterations: 25 of 96; 20 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressNoSync
+    (fork: #1, iteration #5, JVM args: [-Xint])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1        68,924   ACCEPTABLE_INTERESTING  One update lost                                             
+               2     1,127,646               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:13) (Rate: 4.78E+07 samples/sec) (Tests: 3 of 4) (Forks:  6 of 16) (Iterations: 26 of 96; 21 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressVolatile
+(ETA:   00:00:13) (Rate: 4.74E+07 samples/sec) (Tests: 3 of 4) (Forks:  7 of 16) (Iterations: 27 of 96; 22 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressVolatile
+(ETA:   00:00:12) (Rate: 4.70E+07 samples/sec) (Tests: 3 of 4) (Forks:  8 of 16) (Iterations: 28 of 96; 23 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressNoSync
+    (fork: #1, iteration #1, JVM args: [-XX:TieredStopAtLevel=1])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       164,198   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    33,027,632               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:13) (Rate: 4.60E+07 samples/sec) (Tests: 3 of 4) (Forks:  8 of 16) (Iterations: 29 of 96; 24 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressNoSync
+    (fork: #1, iteration #1, JVM args: [])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       144,415   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    28,959,565               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:13) (Rate: 5.03E+07 samples/sec) (Tests: 3 of 4) (Forks:  8 of 16) (Iterations: 30 of 96; 25 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressVolatile
+    (fork: #1, iteration #1, JVM args: [-XX:-TieredCompilation])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       134,553   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    17,880,787               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:12) (Rate: 5.25E+07 samples/sec) (Tests: 3 of 4) (Forks:  8 of 16) (Iterations: 31 of 96; 26 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressVolatile
+    (fork: #1, iteration #1, JVM args: [-Xint])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1        47,482   ACCEPTABLE_INTERESTING  One update lost                                             
+               2     1,028,728               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:12) (Rate: 5.20E+07 samples/sec) (Tests: 3 of 4) (Forks:  8 of 16) (Iterations: 32 of 96; 27 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressNoSync
+    (fork: #1, iteration #2, JVM args: [-XX:TieredStopAtLevel=1])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       158,009   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    32,298,641               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:13) (Rate: 5.08E+07 samples/sec) (Tests: 3 of 4) (Forks:  8 of 16) (Iterations: 33 of 96; 28 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressNoSync
+    (fork: #1, iteration #2, JVM args: [])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       166,943   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    51,907,197               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:12) (Rate: 5.77E+07 samples/sec) (Tests: 3 of 4) (Forks:  8 of 16) (Iterations: 34 of 96; 29 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressVolatile
+    (fork: #1, iteration #2, JVM args: [-XX:-TieredCompilation])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       116,367   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    15,406,503               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:12) (Rate: 5.90E+07 samples/sec) (Tests: 3 of 4) (Forks:  8 of 16) (Iterations: 35 of 96; 30 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressVolatile
+    (fork: #1, iteration #2, JVM args: [-Xint])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       145,622   ACCEPTABLE_INTERESTING  One update lost                                             
+               2       879,798               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:12) (Rate: 5.85E+07 samples/sec) (Tests: 3 of 4) (Forks:  8 of 16) (Iterations: 36 of 96; 31 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressNoSync
+    (fork: #1, iteration #3, JVM args: [-XX:TieredStopAtLevel=1])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       153,510   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    19,823,260               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:12) (Rate: 5.54E+07 samples/sec) (Tests: 3 of 4) (Forks:  8 of 16) (Iterations: 37 of 96; 32 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressNoSync
+    (fork: #1, iteration #3, JVM args: [])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       308,812   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    16,205,588               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:12) (Rate: 5.71E+07 samples/sec) (Tests: 3 of 4) (Forks:  8 of 16) (Iterations: 38 of 96; 33 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressVolatile
+    (fork: #1, iteration #3, JVM args: [-XX:-TieredCompilation])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1        31,990   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    11,144,480               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:11) (Rate: 5.77E+07 samples/sec) (Tests: 3 of 4) (Forks:  8 of 16) (Iterations: 39 of 96; 34 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressVolatile
+    (fork: #1, iteration #3, JVM args: [-Xint])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1        50,735   ACCEPTABLE_INTERESTING  One update lost                                             
+               2       446,305               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:11) (Rate: 5.71E+07 samples/sec) (Tests: 3 of 4) (Forks:  8 of 16) (Iterations: 40 of 96; 35 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressNoSync
+    (fork: #1, iteration #4, JVM args: [-XX:TieredStopAtLevel=1])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       205,363   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    17,614,997               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:12) (Rate: 5.44E+07 samples/sec) (Tests: 3 of 4) (Forks:  8 of 16) (Iterations: 41 of 96; 36 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressNoSync
+    (fork: #1, iteration #4, JVM args: [])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       181,360   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    16,513,900               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:11) (Rate: 5.59E+07 samples/sec) (Tests: 3 of 4) (Forks:  8 of 16) (Iterations: 42 of 96; 37 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressVolatile
+    (fork: #1, iteration #4, JVM args: [-XX:-TieredCompilation])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1        40,993   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    11,718,897               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:11) (Rate: 5.65E+07 samples/sec) (Tests: 3 of 4) (Forks:  8 of 16) (Iterations: 43 of 96; 38 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressVolatile
+    (fork: #1, iteration #4, JVM args: [-Xint])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1        83,779   ACCEPTABLE_INTERESTING  One update lost                                             
+               2       525,621               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:10) (Rate: 5.59E+07 samples/sec) (Tests: 3 of 4) (Forks:  8 of 16) (Iterations: 44 of 96; 39 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressNoSync
+    (fork: #1, iteration #5, JVM args: [-XX:TieredStopAtLevel=1])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       272,071   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    21,226,599               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:11) (Rate: 5.40E+07 samples/sec) (Tests: 3 of 4) (Forks:  8 of 16) (Iterations: 45 of 96; 40 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressAtomic
+(ETA:   00:00:10) (Rate: 5.38E+07 samples/sec) (Tests: 4 of 4) (Forks:  9 of 16) (Iterations: 46 of 96; 41 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressNoSync
+    (fork: #1, iteration #5, JVM args: [])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       423,990   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    17,354,640               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:10) (Rate: 5.54E+07 samples/sec) (Tests: 4 of 4) (Forks:  9 of 16) (Iterations: 47 of 96; 42 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressCAS
+(ETA:   00:00:10) (Rate: 5.49E+07 samples/sec) (Tests: 4 of 4) (Forks: 10 of 16) (Iterations: 48 of 96; 43 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressVolatile
+    (fork: #1, iteration #5, JVM args: [-XX:-TieredCompilation])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1        44,287   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    10,003,723               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:09) (Rate: 5.58E+07 samples/sec) (Tests: 4 of 4) (Forks: 10 of 16) (Iterations: 49 of 96; 44 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressNoSync
+(ETA:   00:00:09) (Rate: 5.56E+07 samples/sec) (Tests: 4 of 4) (Forks: 11 of 16) (Iterations: 50 of 96; 45 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressVolatile
+    (fork: #1, iteration #5, JVM args: [-Xint])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1        64,365   ACCEPTABLE_INTERESTING  One update lost                                             
+               2       495,415               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:08) (Rate: 5.51E+07 samples/sec) (Tests: 4 of 4) (Forks: 11 of 16) (Iterations: 51 of 96; 46 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressCAS
+(ETA:   00:00:08) (Rate: 5.38E+07 samples/sec) (Tests: 4 of 4) (Forks: 12 of 16) (Iterations: 52 of 96; 47 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressAtomic
+(ETA:   00:00:08) (Rate: 5.25E+07 samples/sec) (Tests: 4 of 4) (Forks: 12 of 16) (Iterations: 53 of 96; 48 passed, 5 failed, 0 soft errs, 0 hard errs)                                                                                                                                                          [FAILED] com.tora.benchmarks.JcStressCAS
+    (fork: #1, iteration #1, JVM args: [])
+  Observed state   Occurrences   Expectation  Interpretation                                              
+           1, 10       417,915    ACCEPTABLE  Actor2 -> Actor1 execution                                  
+           5, 10       152,202     FORBIDDEN  No default case provided, assume FORBIDDEN                  
+            5, 2     3,232,613    ACCEPTABLE  Actor1 -> Actor2 execution                                  
+
+(ETA:   00:00:08) (Rate: 5.23E+07 samples/sec) (Tests: 4 of 4) (Forks: 12 of 16) (Iterations: 54 of 96; 48 passed, 6 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressNoSync
+    (fork: #1, iteration #1, JVM args: [-XX:-TieredCompilation])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       189,146   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    20,711,614               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:08) (Rate: 5.39E+07 samples/sec) (Tests: 4 of 4) (Forks: 12 of 16) (Iterations: 55 of 96; 49 passed, 6 failed, 0 soft errs, 0 hard errs)                                                                                                                                                          [FAILED] com.tora.benchmarks.JcStressCAS
+    (fork: #1, iteration #1, JVM args: [-Xint])
+  Observed state   Occurrences   Expectation  Interpretation                                              
+           1, 10        41,112    ACCEPTABLE  Actor2 -> Actor1 execution                                  
+           5, 10       137,194     FORBIDDEN  No default case provided, assume FORBIDDEN                  
+            5, 2       371,514    ACCEPTABLE  Actor1 -> Actor2 execution                                  
+
+(ETA:   00:00:08) (Rate: 5.23E+07 samples/sec) (Tests: 4 of 4) (Forks: 12 of 16) (Iterations: 56 of 96; 49 passed, 7 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressAtomic
+(ETA:   00:00:08) (Rate: 5.16E+07 samples/sec) (Tests: 4 of 4) (Forks: 12 of 16) (Iterations: 57 of 96; 50 passed, 7 failed, 0 soft errs, 0 hard errs)                                                                                                                                                          [FAILED] com.tora.benchmarks.JcStressCAS
+    (fork: #1, iteration #2, JVM args: [])
+  Observed state   Occurrences   Expectation  Interpretation                                              
+           1, 10     1,205,329    ACCEPTABLE  Actor2 -> Actor1 execution                                  
+           5, 10       780,735     FORBIDDEN  No default case provided, assume FORBIDDEN                  
+            5, 2     4,499,106    ACCEPTABLE  Actor1 -> Actor2 execution                                  
+
+(ETA:   00:00:07) (Rate: 5.17E+07 samples/sec) (Tests: 4 of 4) (Forks: 12 of 16) (Iterations: 58 of 96; 50 passed, 8 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressNoSync
+    (fork: #1, iteration #2, JVM args: [-XX:-TieredCompilation])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       247,079   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    29,266,391               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:07) (Rate: 5.39E+07 samples/sec) (Tests: 4 of 4) (Forks: 12 of 16) (Iterations: 59 of 96; 51 passed, 8 failed, 0 soft errs, 0 hard errs)                                                                                                                                                          [FAILED] com.tora.benchmarks.JcStressCAS
+    (fork: #1, iteration #2, JVM args: [-Xint])
+  Observed state   Occurrences   Expectation  Interpretation                                              
+           1, 10       164,258    ACCEPTABLE  Actor2 -> Actor1 execution                                  
+           5, 10        18,997     FORBIDDEN  No default case provided, assume FORBIDDEN                  
+            5, 2       661,995    ACCEPTABLE  Actor1 -> Actor2 execution                                  
+
+(ETA:   00:00:07) (Rate: 5.23E+07 samples/sec) (Tests: 4 of 4) (Forks: 12 of 16) (Iterations: 60 of 96; 51 passed, 9 failed, 0 soft errs, 0 hard errs)                                                                                                                                                              [OK] com.tora.benchmarks.JcStressAtomic
+(ETA:   00:00:07) (Rate: 5.20E+07 samples/sec) (Tests: 4 of 4) (Forks: 12 of 16) (Iterations: 61 of 96; 52 passed, 9 failed, 0 soft errs, 0 hard errs)                                                                                                                                                          [FAILED] com.tora.benchmarks.JcStressCAS
+    (fork: #1, iteration #3, JVM args: [])
+  Observed state   Occurrences   Expectation  Interpretation                                              
+           1, 10     1,727,076    ACCEPTABLE  Actor2 -> Actor1 execution                                  
+           5, 10       448,253     FORBIDDEN  No default case provided, assume FORBIDDEN                  
+            5, 2     5,055,931    ACCEPTABLE  Actor1 -> Actor2 execution                                  
+
+(ETA:   00:00:07) (Rate: 5.21E+07 samples/sec) (Tests: 4 of 4) (Forks: 12 of 16) (Iterations: 62 of 96; 52 passed, 10 failed, 0 soft errs, 0 hard errs)                                                                                                                                                               [OK] com.tora.benchmarks.JcStressNoSync
+    (fork: #1, iteration #3, JVM args: [-XX:-TieredCompilation])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       309,560   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    53,657,560               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:06) (Rate: 5.59E+07 samples/sec) (Tests: 4 of 4) (Forks: 12 of 16) (Iterations: 63 of 96; 53 passed, 10 failed, 0 soft errs, 0 hard errs)                                                                                                                                                           [FAILED] com.tora.benchmarks.JcStressCAS
+    (fork: #1, iteration #3, JVM args: [-Xint])
+  Observed state   Occurrences   Expectation  Interpretation                                              
+           1, 10       153,853    ACCEPTABLE  Actor2 -> Actor1 execution                                  
+           5, 10        23,574     FORBIDDEN  No default case provided, assume FORBIDDEN                  
+            5, 2       621,623    ACCEPTABLE  Actor1 -> Actor2 execution                                  
+
+(ETA:   00:00:06) (Rate: 5.43E+07 samples/sec) (Tests: 4 of 4) (Forks: 12 of 16) (Iterations: 64 of 96; 53 passed, 11 failed, 0 soft errs, 0 hard errs)                                                                                                                                                               [OK] com.tora.benchmarks.JcStressAtomic
+(ETA:   00:00:06) (Rate: 5.40E+07 samples/sec) (Tests: 4 of 4) (Forks: 12 of 16) (Iterations: 65 of 96; 54 passed, 11 failed, 0 soft errs, 0 hard errs)                                                                                                                                                           [FAILED] com.tora.benchmarks.JcStressCAS
+    (fork: #1, iteration #4, JVM args: [])
+  Observed state   Occurrences   Expectation  Interpretation                                              
+           1, 10     2,006,117    ACCEPTABLE  Actor2 -> Actor1 execution                                  
+           5, 10     1,594,705     FORBIDDEN  No default case provided, assume FORBIDDEN                  
+            5, 2     3,393,098    ACCEPTABLE  Actor1 -> Actor2 execution                                  
+
+(ETA:   00:00:06) (Rate: 5.41E+07 samples/sec) (Tests: 4 of 4) (Forks: 12 of 16) (Iterations: 66 of 96; 54 passed, 12 failed, 0 soft errs, 0 hard errs)                                                                                                                                                               [OK] com.tora.benchmarks.JcStressNoSync
+    (fork: #1, iteration #4, JVM args: [-XX:-TieredCompilation])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       417,068   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    32,991,152               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:06) (Rate: 5.62E+07 samples/sec) (Tests: 4 of 4) (Forks: 12 of 16) (Iterations: 67 of 96; 55 passed, 12 failed, 0 soft errs, 0 hard errs)                                                                                                                                                           [FAILED] com.tora.benchmarks.JcStressCAS
+    (fork: #1, iteration #4, JVM args: [-Xint])
+  Observed state   Occurrences   Expectation  Interpretation                                              
+           1, 10       394,031    ACCEPTABLE  Actor2 -> Actor1 execution                                  
+           5, 10       186,945     FORBIDDEN  No default case provided, assume FORBIDDEN                  
+            5, 2       207,124    ACCEPTABLE  Actor1 -> Actor2 execution                                  
+
+(ETA:   00:00:05) (Rate: 5.46E+07 samples/sec) (Tests: 4 of 4) (Forks: 12 of 16) (Iterations: 68 of 96; 55 passed, 13 failed, 0 soft errs, 0 hard errs)                                                                                                                                                               [OK] com.tora.benchmarks.JcStressAtomic
+(ETA:   00:00:05) (Rate: 5.46E+07 samples/sec) (Tests: 4 of 4) (Forks: 12 of 16) (Iterations: 69 of 96; 56 passed, 13 failed, 0 soft errs, 0 hard errs)                                                                                                                                                               [OK] com.tora.benchmarks.JcStressCAS
+(ETA:   00:00:05) (Rate: 5.43E+07 samples/sec) (Tests: 4 of 4) (Forks: 13 of 16) (Iterations: 70 of 96; 57 passed, 13 failed, 0 soft errs, 0 hard errs)                                                                                                                                                           [FAILED] com.tora.benchmarks.JcStressCAS
+    (fork: #1, iteration #5, JVM args: [])
+  Observed state   Occurrences   Expectation  Interpretation                                              
+           1, 10     3,471,395    ACCEPTABLE  Actor2 -> Actor1 execution                                  
+           5, 10       451,238     FORBIDDEN  No default case provided, assume FORBIDDEN                  
+            5, 2     4,439,627    ACCEPTABLE  Actor1 -> Actor2 execution                                  
+
+(ETA:   00:00:05) (Rate: 5.47E+07 samples/sec) (Tests: 4 of 4) (Forks: 13 of 16) (Iterations: 71 of 96; 57 passed, 14 failed, 0 soft errs, 0 hard errs)                                                                                                                                                               [OK] com.tora.benchmarks.JcStressAtomic
+(ETA:   00:00:04) (Rate: 5.46E+07 samples/sec) (Tests: 4 of 4) (Forks: 14 of 16) (Iterations: 72 of 96; 58 passed, 14 failed, 0 soft errs, 0 hard errs)                                                                                                                                                               [OK] com.tora.benchmarks.JcStressNoSync
+    (fork: #1, iteration #5, JVM args: [-XX:-TieredCompilation])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       282,859   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    34,825,531               ACCEPTABLE  Both updates                                                
+
+(ETA:   00:00:04) (Rate: 5.68E+07 samples/sec) (Tests: 4 of 4) (Forks: 14 of 16) (Iterations: 73 of 96; 59 passed, 14 failed, 0 soft errs, 0 hard errs)                                                                                                                                                               [OK] com.tora.benchmarks.JcStressAtomic
+(ETA:   00:00:04) (Rate: 5.67E+07 samples/sec) (Tests: 4 of 4) (Forks: 15 of 16) (Iterations: 74 of 96; 60 passed, 14 failed, 0 soft errs, 0 hard errs)                                                                                                                                                           [FAILED] com.tora.benchmarks.JcStressCAS
+    (fork: #1, iteration #5, JVM args: [-Xint])
+  Observed state   Occurrences   Expectation  Interpretation                                              
+           1, 10       313,527    ACCEPTABLE  Actor2 -> Actor1 execution                                  
+           5, 10        52,449     FORBIDDEN  No default case provided, assume FORBIDDEN                  
+            5, 2       368,244    ACCEPTABLE  Actor1 -> Actor2 execution                                  
+
+(ETA:   00:00:04) (Rate: 5.52E+07 samples/sec) (Tests: 4 of 4) (Forks: 15 of 16) (Iterations: 75 of 96; 60 passed, 15 failed, 0 soft errs, 0 hard errs)                                                                                                                                                               [OK] com.tora.benchmarks.JcStressAtomic
+(ETA:   00:00:03) (Rate: 5.48E+07 samples/sec) (Tests: 4 of 4) (Forks: 16 of 16) (Iterations: 76 of 96; 61 passed, 15 failed, 0 soft errs, 0 hard errs)                                                                                                                                                           [FAILED] com.tora.benchmarks.JcStressCAS
+    (fork: #1, iteration #1, JVM args: [-XX:TieredStopAtLevel=1])
+  Observed state   Occurrences   Expectation  Interpretation                                              
+           1, 10     2,011,481    ACCEPTABLE  Actor2 -> Actor1 execution                                  
+           5, 10     1,786,028     FORBIDDEN  No default case provided, assume FORBIDDEN                  
+            5, 2     2,940,921    ACCEPTABLE  Actor1 -> Actor2 execution                                  
+
+(ETA:   00:00:03) (Rate: 5.41E+07 samples/sec) (Tests: 4 of 4) (Forks: 16 of 16) (Iterations: 77 of 96; 61 passed, 16 failed, 0 soft errs, 0 hard errs)                                                                                                                                                               [OK] com.tora.benchmarks.JcStressAtomic
+(ETA:   00:00:03) (Rate: 5.48E+07 samples/sec) (Tests: 4 of 4) (Forks: 16 of 16) (Iterations: 78 of 96; 62 passed, 16 failed, 0 soft errs, 0 hard errs)                                                                                                                                                               [OK] com.tora.benchmarks.JcStressAtomic
+(ETA:   00:00:03) (Rate: 5.60E+07 samples/sec) (Tests: 4 of 4) (Forks: 16 of 16) (Iterations: 79 of 96; 63 passed, 16 failed, 0 soft errs, 0 hard errs)                                                                                                                                                               [OK] com.tora.benchmarks.JcStressAtomic
+(ETA:   00:00:03) (Rate: 5.42E+07 samples/sec) (Tests: 4 of 4) (Forks: 16 of 16) (Iterations: 80 of 96; 64 passed, 16 failed, 0 soft errs, 0 hard errs)                                                                                                                                                           [FAILED] com.tora.benchmarks.JcStressCAS
+    (fork: #1, iteration #2, JVM args: [-XX:TieredStopAtLevel=1])
+  Observed state   Occurrences   Expectation  Interpretation                                              
+           1, 10     2,020,195    ACCEPTABLE  Actor2 -> Actor1 execution                                  
+           5, 10     3,278,778     FORBIDDEN  No default case provided, assume FORBIDDEN                  
+            5, 2     1,714,117    ACCEPTABLE  Actor1 -> Actor2 execution                                  
+
+(ETA:   00:00:02) (Rate: 5.36E+07 samples/sec) (Tests: 4 of 4) (Forks: 16 of 16) (Iterations: 81 of 96; 64 passed, 17 failed, 0 soft errs, 0 hard errs)                                                                                                                                                               [OK] com.tora.benchmarks.JcStressAtomic
+(ETA:   00:00:02) (Rate: 5.43E+07 samples/sec) (Tests: 4 of 4) (Forks: 16 of 16) (Iterations: 82 of 96; 65 passed, 17 failed, 0 soft errs, 0 hard errs)                                                                                                                                                               [OK] com.tora.benchmarks.JcStressAtomic
+(ETA:   00:00:02) (Rate: 5.51E+07 samples/sec) (Tests: 4 of 4) (Forks: 16 of 16) (Iterations: 83 of 96; 66 passed, 17 failed, 0 soft errs, 0 hard errs)                                                                                                                                                               [OK] com.tora.benchmarks.JcStressAtomic
+(ETA:   00:00:02) (Rate: 5.34E+07 samples/sec) (Tests: 4 of 4) (Forks: 16 of 16) (Iterations: 84 of 96; 67 passed, 17 failed, 0 soft errs, 0 hard errs)                                                                                                                                                           [FAILED] com.tora.benchmarks.JcStressCAS
+    (fork: #1, iteration #3, JVM args: [-XX:TieredStopAtLevel=1])
+  Observed state   Occurrences   Expectation  Interpretation                                              
+           1, 10       328,246    ACCEPTABLE  Actor2 -> Actor1 execution                                  
+           5, 10       320,828     FORBIDDEN  No default case provided, assume FORBIDDEN                  
+            5, 2     8,419,036    ACCEPTABLE  Actor1 -> Actor2 execution                                  
+
+(ETA:   00:00:02) (Rate: 5.30E+07 samples/sec) (Tests: 4 of 4) (Forks: 16 of 16) (Iterations: 85 of 96; 67 passed, 18 failed, 0 soft errs, 0 hard errs)                                                                                                                                                               [OK] com.tora.benchmarks.JcStressAtomic
+(ETA:   00:00:01) (Rate: 5.38E+07 samples/sec) (Tests: 4 of 4) (Forks: 16 of 16) (Iterations: 86 of 96; 68 passed, 18 failed, 0 soft errs, 0 hard errs)                                                                                                                                                               [OK] com.tora.benchmarks.JcStressAtomic
+(ETA:   00:00:01) (Rate: 5.46E+07 samples/sec) (Tests: 4 of 4) (Forks: 16 of 16) (Iterations: 87 of 96; 69 passed, 18 failed, 0 soft errs, 0 hard errs)                                                                                                                                                               [OK] com.tora.benchmarks.JcStressAtomic
+(ETA:   00:00:01) (Rate: 5.30E+07 samples/sec) (Tests: 4 of 4) (Forks: 16 of 16) (Iterations: 88 of 96; 70 passed, 18 failed, 0 soft errs, 0 hard errs)                                                                                                                                                           [FAILED] com.tora.benchmarks.JcStressCAS
+    (fork: #1, iteration #4, JVM args: [-XX:TieredStopAtLevel=1])
+  Observed state   Occurrences   Expectation  Interpretation                                              
+           1, 10     3,146,363    ACCEPTABLE  Actor2 -> Actor1 execution                                  
+           5, 10     1,757,656     FORBIDDEN  No default case provided, assume FORBIDDEN                  
+            5, 2     2,015,431    ACCEPTABLE  Actor1 -> Actor2 execution                                  
+
+(ETA:   00:00:01) (Rate: 5.25E+07 samples/sec) (Tests: 4 of 4) (Forks: 16 of 16) (Iterations: 89 of 96; 70 passed, 19 failed, 0 soft errs, 0 hard errs)                                                                                                                                                               [OK] com.tora.benchmarks.JcStressAtomic
+(ETA:   00:00:01) (Rate: 5.31E+07 samples/sec) (Tests: 4 of 4) (Forks: 16 of 16) (Iterations: 90 of 96; 71 passed, 19 failed, 0 soft errs, 0 hard errs)                                                                                                                                                               [OK] com.tora.benchmarks.JcStressAtomic
+(ETA:   00:00:00) (Rate: 5.37E+07 samples/sec) (Tests: 4 of 4) (Forks: 16 of 16) (Iterations: 91 of 96; 72 passed, 19 failed, 0 soft errs, 0 hard errs)                                                                                                                                                               [OK] com.tora.benchmarks.JcStressAtomic
+(ETA:   00:00:00) (Rate: 5.21E+07 samples/sec) (Tests: 4 of 4) (Forks: 16 of 16) (Iterations: 92 of 96; 73 passed, 19 failed, 0 soft errs, 0 hard errs)                                                                                                                                                           [FAILED] com.tora.benchmarks.JcStressCAS
+    (fork: #1, iteration #5, JVM args: [-XX:TieredStopAtLevel=1])
+  Observed state   Occurrences   Expectation  Interpretation                                              
+           1, 10       384,558    ACCEPTABLE  Actor2 -> Actor1 execution                                  
+           5, 10       445,897     FORBIDDEN  No default case provided, assume FORBIDDEN                  
+            5, 2     4,026,375    ACCEPTABLE  Actor1 -> Actor2 execution                                  
+
+(ETA:   00:00:00) (Rate: 5.16E+07 samples/sec) (Tests: 4 of 4) (Forks: 16 of 16) (Iterations: 93 of 96; 73 passed, 20 failed, 0 soft errs, 0 hard errs)                                                                                                                                                               [OK] com.tora.benchmarks.JcStressAtomic
+(ETA:   00:00:00) (Rate: 5.19E+07 samples/sec) (Tests: 4 of 4) (Forks: 16 of 16) (Iterations: 94 of 96; 74 passed, 20 failed, 0 soft errs, 0 hard errs)                                                                                                                                                               [OK] com.tora.benchmarks.JcStressAtomic
+(ETA:        now) (Rate: 5.22E+07 samples/sec) (Tests: 4 of 4) (Forks: 16 of 16) (Iterations: 95 of 96; 75 passed, 20 failed, 0 soft errs, 0 hard errs)                                                                                                                                                               [OK] com.tora.benchmarks.JcStressAtomic
+(ETA:        now) (Rate: 5.08E+07 samples/sec) (Tests: 4 of 4) (Forks: 16 of 16) (Iterations: 96 of 96; 76 passed, 20 failed, 0 soft errs, 0 hard errs) 
+
+RUN COMPLETE.
+
+RUN RESULTS:
+------------------------------------------------------------------------------------------------------------------------
+
+*** INTERESTING tests
+  Some interesting behaviors observed. This is for the plain curiosity.
+
+  8 matching test results. 
+      [OK] com.tora.benchmarks.JcStressNoSync
+    (JVM args: [-XX:-TieredCompilation])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1     1,445,712   ACCEPTABLE_INTERESTING  One update lost                                             
+               2   171,485,016               ACCEPTABLE  Both updates                                                
+
+      [OK] com.tora.benchmarks.JcStressNoSync
+    (JVM args: [-XX:TieredStopAtLevel=1])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       953,151   ACCEPTABLE_INTERESTING  One update lost                                             
+               2   124,023,897               ACCEPTABLE  Both updates                                                
+
+      [OK] com.tora.benchmarks.JcStressNoSync
+    (JVM args: [-Xint])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       236,115   ACCEPTABLE_INTERESTING  One update lost                                             
+               2     4,797,643               ACCEPTABLE  Both updates                                                
+
+      [OK] com.tora.benchmarks.JcStressNoSync
+    (JVM args: [])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1     1,225,520   ACCEPTABLE_INTERESTING  One update lost                                             
+               2   130,973,658               ACCEPTABLE  Both updates                                                
+
+      [OK] com.tora.benchmarks.JcStressVolatile
+    (JVM args: [-XX:-TieredCompilation])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       368,190   ACCEPTABLE_INTERESTING  One update lost                                             
+               2    66,187,158               ACCEPTABLE  Both updates                                                
+
+      [OK] com.tora.benchmarks.JcStressVolatile
+    (JVM args: [-XX:TieredStopAtLevel=1])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       506,974   ACCEPTABLE_INTERESTING  One update lost                                             
+               2   102,448,404               ACCEPTABLE  Both updates                                                
+
+      [OK] com.tora.benchmarks.JcStressVolatile
+    (JVM args: [-Xint])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       391,983   ACCEPTABLE_INTERESTING  One update lost                                             
+               2     3,408,635               ACCEPTABLE  Both updates                                                
+
+      [OK] com.tora.benchmarks.JcStressVolatile
+    (JVM args: [])
+  Observed state   Occurrences              Expectation  Interpretation                                              
+               1       412,399   ACCEPTABLE_INTERESTING  One update lost                                             
+               2   103,370,879               ACCEPTABLE  Both updates                                                
+
+
+*** FAILED tests
+  Strong asserts were violated. Correct implementations should have no assert failures here.
+
+  4 matching test results. 
+  [FAILED] com.tora.benchmarks.JcStressCAS
+    (JVM args: [-XX:-TieredCompilation])
+  Observed state   Occurrences   Expectation  Interpretation                                              
+           1, 10     9,222,104    ACCEPTABLE  Actor2 -> Actor1 execution                                  
+           5, 10     4,506,925     FORBIDDEN  No default case provided, assume FORBIDDEN                  
+            5, 2    21,771,699    ACCEPTABLE  Actor1 -> Actor2 execution                                  
+
+  [FAILED] com.tora.benchmarks.JcStressCAS
+    (JVM args: [-XX:TieredStopAtLevel=1])
+  Observed state   Occurrences   Expectation  Interpretation                                              
+           1, 10     7,890,843    ACCEPTABLE  Actor2 -> Actor1 execution                                  
+           5, 10     7,589,187     FORBIDDEN  No default case provided, assume FORBIDDEN                  
+            5, 2    19,148,648    ACCEPTABLE  Actor1 -> Actor2 execution                                  
+
+  [FAILED] com.tora.benchmarks.JcStressCAS
+    (JVM args: [-Xint])
+  Observed state   Occurrences   Expectation  Interpretation                                              
+           1, 10     1,066,781    ACCEPTABLE  Actor2 -> Actor1 execution                                  
+           5, 10       419,159     FORBIDDEN  No default case provided, assume FORBIDDEN                  
+            5, 2     2,263,268    ACCEPTABLE  Actor1 -> Actor2 execution                                  
+
+  [FAILED] com.tora.benchmarks.JcStressCAS
+    (JVM args: [])
+  Observed state   Occurrences   Expectation  Interpretation                                              
+           1, 10     8,827,833    ACCEPTABLE  Actor2 -> Actor1 execution                                  
+           5, 10     3,427,133     FORBIDDEN  No default case provided, assume FORBIDDEN                  
+            5, 2    20,653,142    ACCEPTABLE  Actor1 -> Actor2 execution                                  
+
+
+*** ERROR tests
+  Tests break for some reason, other than failing the assert. Correct implementations should have none.
+
+  0 matching test results. 
+
+*** All remaining tests
+  Tests that do not fall into any of the previous categories.
+
+  4 matching test results.  Use -v to print them.
+
+------------------------------------------------------------------------------------------------------------------------
+
+HTML report was generated. Look at results/index.html for the complete run results.
+
+Will throw any pending exceptions at this point.
