@@ -1,0 +1,361 @@
+2017-12-09 00:07:25
+Full thread dump Java HotSpot(TM) 64-Bit Server VM (25.151-b12 mixed mode):
+
+"Attach Listener" #22 daemon prio=9 os_prio=0 tid=0x00007f7108001000 nid=0x6b20 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"TPWorker10" #21 prio=5 os_prio=0 tid=0x00007f70d8014800 nid=0x6ad2 waiting on condition [0x00007f70f0dfb000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000d7280ff0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:836)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(AbstractQueuedSynchronizer.java:870)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:1199)
+	at java.util.concurrent.locks.ReentrantLock$NonfairSync.lock(ReentrantLock.java:209)
+	at java.util.concurrent.locks.ReentrantLock.lock(ReentrantLock.java:285)
+	at com.tora.model.util.LockUtils.lockIfExists(LockUtils.java:30)
+	at com.tora.model.PendingRequests.run(PendingRequests.java:92)
+	at com.tora.model.Service.recover(Service.java:101)
+	at com.tora.model.Service.lambda$createProcessTask$3(Service.java:129)
+	at com.tora.model.Service$$Lambda$1/128893786.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"TPWorker9" #20 prio=5 os_prio=0 tid=0x00007f70d8012800 nid=0x6ad1 waiting on condition [0x00007f70f0efc000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000d7280ff0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:836)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(AbstractQueuedSynchronizer.java:870)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:1199)
+	at java.util.concurrent.locks.ReentrantLock$NonfairSync.lock(ReentrantLock.java:209)
+	at java.util.concurrent.locks.ReentrantLock.lock(ReentrantLock.java:285)
+	at com.tora.model.util.LockUtils.lockIfExists(LockUtils.java:30)
+	at com.tora.model.PendingRequests.run(PendingRequests.java:92)
+	at com.tora.model.Service.recover(Service.java:101)
+	at com.tora.model.Service.lambda$createProcessTask$3(Service.java:129)
+	at com.tora.model.Service$$Lambda$1/128893786.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"TPWorker8" #19 prio=5 os_prio=0 tid=0x00007f70d8011000 nid=0x6ad0 waiting on condition [0x00007f70f0ffd000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000d7280ff0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:836)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(AbstractQueuedSynchronizer.java:870)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:1199)
+	at java.util.concurrent.locks.ReentrantLock$NonfairSync.lock(ReentrantLock.java:209)
+	at java.util.concurrent.locks.ReentrantLock.lock(ReentrantLock.java:285)
+	at com.tora.model.util.LockUtils.lockIfExists(LockUtils.java:30)
+	at com.tora.model.PendingRequests.run(PendingRequests.java:92)
+	at com.tora.model.Service.recover(Service.java:101)
+	at com.tora.model.Service.lambda$createProcessTask$3(Service.java:129)
+	at com.tora.model.Service$$Lambda$1/128893786.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"TPWorker7" #18 prio=5 os_prio=0 tid=0x00007f70d800f800 nid=0x6acf waiting on condition [0x00007f7120160000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000d7280ff0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:836)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(AbstractQueuedSynchronizer.java:870)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:1199)
+	at java.util.concurrent.locks.ReentrantLock$NonfairSync.lock(ReentrantLock.java:209)
+	at java.util.concurrent.locks.ReentrantLock.lock(ReentrantLock.java:285)
+	at com.tora.model.util.LockUtils.lockIfExists(LockUtils.java:30)
+	at com.tora.model.PendingRequests.run(PendingRequests.java:92)
+	at com.tora.model.Service.recover(Service.java:101)
+	at com.tora.model.Service.lambda$createProcessTask$3(Service.java:129)
+	at com.tora.model.Service$$Lambda$1/128893786.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"TPWorker6" #17 prio=5 os_prio=0 tid=0x00007f70d800d800 nid=0x6ace waiting on condition [0x00007f7120261000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000d7280ff0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:836)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(AbstractQueuedSynchronizer.java:870)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:1199)
+	at java.util.concurrent.locks.ReentrantLock$NonfairSync.lock(ReentrantLock.java:209)
+	at java.util.concurrent.locks.ReentrantLock.lock(ReentrantLock.java:285)
+	at com.tora.model.util.LockUtils.lockIfExists(LockUtils.java:30)
+	at com.tora.model.PendingRequests.run(PendingRequests.java:92)
+	at com.tora.model.Service.recover(Service.java:101)
+	at com.tora.model.Service.lambda$createProcessTask$3(Service.java:129)
+	at com.tora.model.Service$$Lambda$1/128893786.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"TPWorker5" #16 prio=5 os_prio=0 tid=0x00007f70d800c000 nid=0x6acd waiting for monitor entry [0x00007f7120362000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.tora.model.AbstractProcessor.process(AbstractProcessor.java:43)
+	- waiting to lock <0x00000000d7297c28> (a java.lang.Object)
+	at com.tora.model.Service.lambda$recover$1(Service.java:101)
+	at com.tora.model.Service$$Lambda$3/1714644380.run(Unknown Source)
+	at com.tora.model.PendingRequests.run(PendingRequests.java:94)
+	at com.tora.model.Service.recover(Service.java:101)
+	at com.tora.model.Service.lambda$createProcessTask$3(Service.java:129)
+	at com.tora.model.Service$$Lambda$1/128893786.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"TPWorker4" #15 prio=5 os_prio=0 tid=0x00007f70d800a000 nid=0x6acc waiting on condition [0x00007f7120463000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000d7280ff0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:836)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(AbstractQueuedSynchronizer.java:870)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:1199)
+	at java.util.concurrent.locks.ReentrantLock$NonfairSync.lock(ReentrantLock.java:209)
+	at java.util.concurrent.locks.ReentrantLock.lock(ReentrantLock.java:285)
+	at com.tora.model.util.LockUtils.lockIfExists(LockUtils.java:30)
+	at com.tora.model.PendingRequests.run(PendingRequests.java:92)
+	at com.tora.model.Service.recover(Service.java:101)
+	at com.tora.model.Service.lambda$createProcessTask$3(Service.java:129)
+	at com.tora.model.Service$$Lambda$1/128893786.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"TPWorker3" #14 prio=5 os_prio=0 tid=0x00007f70d8008800 nid=0x6acb waiting on condition [0x00007f7120564000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000d7280ff0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:836)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(AbstractQueuedSynchronizer.java:870)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:1199)
+	at java.util.concurrent.locks.ReentrantLock$NonfairSync.lock(ReentrantLock.java:209)
+	at java.util.concurrent.locks.ReentrantLock.lock(ReentrantLock.java:285)
+	at com.tora.model.util.LockUtils.lockIfExists(LockUtils.java:30)
+	at com.tora.model.PendingRequests.run(PendingRequests.java:92)
+	at com.tora.model.Service.recover(Service.java:101)
+	at com.tora.model.Service.lambda$createProcessTask$3(Service.java:129)
+	at com.tora.model.Service$$Lambda$1/128893786.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"TPWorker2" #13 prio=5 os_prio=0 tid=0x00007f714c40e000 nid=0x6aca waiting on condition [0x00007f7120665000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000d7280ff0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:836)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(AbstractQueuedSynchronizer.java:870)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:1199)
+	at java.util.concurrent.locks.ReentrantLock$NonfairSync.lock(ReentrantLock.java:209)
+	at java.util.concurrent.locks.ReentrantLock.lock(ReentrantLock.java:285)
+	at com.tora.model.util.LockUtils.lockIfExists(LockUtils.java:30)
+	at com.tora.model.PendingRequests.run(PendingRequests.java:92)
+	at com.tora.model.Service.recover(Service.java:101)
+	at com.tora.model.Service.lambda$createProcessTask$3(Service.java:129)
+	at com.tora.model.Service$$Lambda$1/128893786.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"pool-1-thread-1" #12 prio=5 os_prio=0 tid=0x00007f714c40c800 nid=0x6ac9 waiting on condition [0x00007f7120766000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000d747cab8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"TPWorker1" #11 prio=5 os_prio=0 tid=0x00007f714c40a000 nid=0x6ac8 waiting on condition [0x00007f7120867000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000d7280ff0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:836)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(AbstractQueuedSynchronizer.java:870)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:1199)
+	at java.util.concurrent.locks.ReentrantLock$NonfairSync.lock(ReentrantLock.java:209)
+	at java.util.concurrent.locks.ReentrantLock.lock(ReentrantLock.java:285)
+	at com.tora.model.util.LockUtils.lockIfExists(LockUtils.java:30)
+	at com.tora.model.PendingRequests.run(PendingRequests.java:92)
+	at com.tora.model.Service.recover(Service.java:101)
+	at com.tora.model.Service.lambda$createProcessTask$3(Service.java:129)
+	at com.tora.model.Service$$Lambda$1/128893786.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+"Service Thread" #10 daemon prio=9 os_prio=0 tid=0x00007f714c315000 nid=0x6ac5 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C1 CompilerThread3" #9 daemon prio=9 os_prio=0 tid=0x00007f714c2f5800 nid=0x6ac4 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread2" #8 daemon prio=9 os_prio=0 tid=0x00007f714c2f3800 nid=0x6ac3 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread1" #7 daemon prio=9 os_prio=0 tid=0x00007f714c2f1800 nid=0x6ac2 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #6 daemon prio=9 os_prio=0 tid=0x00007f714c2ef800 nid=0x6ac1 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Ctrl-Break" #5 daemon prio=5 os_prio=0 tid=0x00007f714c2ed800 nid=0x6ac0 runnable [0x00007f7121185000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	- locked <0x00000000d6ef6b38> (a java.io.InputStreamReader)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.io.BufferedReader.readLine(BufferedReader.java:324)
+	- locked <0x00000000d6ef6b38> (a java.io.InputStreamReader)
+	at java.io.BufferedReader.readLine(BufferedReader.java:389)
+	at com.intellij.rt.execution.application.AppMainV2$1.run(AppMainV2.java:64)
+
+"Signal Dispatcher" #4 daemon prio=9 os_prio=0 tid=0x00007f714c209000 nid=0x6abf runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Finalizer" #3 daemon prio=8 os_prio=0 tid=0x00007f714c1d5000 nid=0x6ab7 in Object.wait() [0x00007f7121806000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000000d6d88ec8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+	- locked <0x00000000d6d88ec8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+
+"Reference Handler" #2 daemon prio=10 os_prio=0 tid=0x00007f714c1d0800 nid=0x6ab6 in Object.wait() [0x00007f7121907000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000000d6d86b68> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+	- locked <0x00000000d6d86b68> (a java.lang.ref.Reference$Lock)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+"main" #1 prio=5 os_prio=0 tid=0x00007f714c00b800 nid=0x6aa0 waiting on condition [0x00007f7153595000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000d7280ff0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:836)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(AbstractQueuedSynchronizer.java:870)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:1199)
+	at java.util.concurrent.locks.ReentrantLock$NonfairSync.lock(ReentrantLock.java:209)
+	at java.util.concurrent.locks.ReentrantLock.lock(ReentrantLock.java:285)
+	at com.tora.model.util.LockUtils.lockIfExists(LockUtils.java:30)
+	at com.tora.model.PendingRequests.requestExists(PendingRequests.java:76)
+	at com.tora.model.Service$3.doProcess(Service.java:66)
+	at com.tora.model.Service$3.doProcess(Service.java:63)
+	at com.tora.model.AbstractProcessor.activate(AbstractProcessor.java:60)
+	- locked <0x00000000d7297c28> (a java.lang.Object)
+	at com.tora.model.Service.start(Service.java:82)
+	at com.tora.test.StressTest.main(JcStressTest.java:43)
+
+"VM Thread" os_prio=0 tid=0x00007f714c1c8800 nid=0x6ab3 runnable 
+
+"GC task thread#0 (ParallelGC)" os_prio=0 tid=0x00007f714c021000 nid=0x6aa2 runnable 
+
+"GC task thread#1 (ParallelGC)" os_prio=0 tid=0x00007f714c022800 nid=0x6aa4 runnable 
+
+"GC task thread#2 (ParallelGC)" os_prio=0 tid=0x00007f714c024800 nid=0x6aa7 runnable 
+
+"GC task thread#3 (ParallelGC)" os_prio=0 tid=0x00007f714c026000 nid=0x6aa8 runnable 
+
+"GC task thread#4 (ParallelGC)" os_prio=0 tid=0x00007f714c028000 nid=0x6aaa runnable 
+
+"GC task thread#5 (ParallelGC)" os_prio=0 tid=0x00007f714c029800 nid=0x6aae runnable 
+
+"GC task thread#6 (ParallelGC)" os_prio=0 tid=0x00007f714c02b800 nid=0x6ab0 runnable 
+
+"GC task thread#7 (ParallelGC)" os_prio=0 tid=0x00007f714c02d000 nid=0x6ab1 runnable 
+
+"VM Periodic Task Thread" os_prio=0 tid=0x00007f714c317800 nid=0x6ac6 waiting on condition 
+
+JNI global references: 368
+
+
+Found one Java-level deadlock:
+=============================
+"TPWorker10":
+  waiting for ownable synchronizer 0x00000000d7280ff0, (a java.util.concurrent.locks.ReentrantLock$NonfairSync),
+  which is held by "TPWorker5"
+"TPWorker5":
+  waiting to lock monitor 0x00007f71100062c8 (object 0x00000000d7297c28, a java.lang.Object),
+  which is held by "main"
+"main":
+  waiting for ownable synchronizer 0x00000000d7280ff0, (a java.util.concurrent.locks.ReentrantLock$NonfairSync),
+  which is held by "TPWorker5"
+
+Java stack information for the threads listed above:
+===================================================
+"TPWorker10":
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000d7280ff0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:836)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(AbstractQueuedSynchronizer.java:870)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:1199)
+	at java.util.concurrent.locks.ReentrantLock$NonfairSync.lock(ReentrantLock.java:209)
+	at java.util.concurrent.locks.ReentrantLock.lock(ReentrantLock.java:285)
+	at com.tora.model.util.LockUtils.lockIfExists(LockUtils.java:30)
+	at com.tora.model.PendingRequests.run(PendingRequests.java:92)
+	at com.tora.model.Service.recover(Service.java:101)
+	at com.tora.model.Service.lambda$createProcessTask$3(Service.java:129)
+	at com.tora.model.Service$$Lambda$1/128893786.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+"TPWorker5":
+	at com.tora.model.AbstractProcessor.process(AbstractProcessor.java:43)
+	- waiting to lock <0x00000000d7297c28> (a java.lang.Object)
+	at com.tora.model.Service.lambda$recover$1(Service.java:101)
+	at com.tora.model.Service$$Lambda$3/1714644380.run(Unknown Source)
+	at com.tora.model.PendingRequests.run(PendingRequests.java:94)
+	at com.tora.model.Service.recover(Service.java:101)
+	at com.tora.model.Service.lambda$createProcessTask$3(Service.java:129)
+	at com.tora.model.Service$$Lambda$1/128893786.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+"main":
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000d7280ff0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:836)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(AbstractQueuedSynchronizer.java:870)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:1199)
+	at java.util.concurrent.locks.ReentrantLock$NonfairSync.lock(ReentrantLock.java:209)
+	at java.util.concurrent.locks.ReentrantLock.lock(ReentrantLock.java:285)
+	at com.tora.model.util.LockUtils.lockIfExists(LockUtils.java:30)
+	at com.tora.model.PendingRequests.requestExists(PendingRequests.java:76)
+	at com.tora.model.Service$3.doProcess(Service.java:66)
+	at com.tora.model.Service$3.doProcess(Service.java:63)
+	at com.tora.model.AbstractProcessor.activate(AbstractProcessor.java:60)
+	- locked <0x00000000d7297c28> (a java.lang.Object)
+	at com.tora.model.Service.start(Service.java:82)
+	at com.tora.test.StressTest.main(JcStressTest.java:43)
+
+Found 1 deadlock.
+
