@@ -19,6 +19,7 @@
         <jacoco-version>0.7.9</jacoco-version>
         <jmh.version>1.19</jmh.version>
         <uberjar.name>benchmarks</uberjar.name>
+        <jcstress.version>0.4</jcstress.version>
 
     </properties>
 
@@ -97,6 +98,7 @@
 	<module>course11</module>
 	<module>course12</module>
 	<module>course13</module>
+	<module>extra</module>
     </modules>
 
     <profiles>
